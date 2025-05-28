@@ -39,7 +39,7 @@ function HeroSection() {
             BEANECA
           </h2>
           <h1 className="mb-8 text-5xl font-bold text-white leading-tight">
-            Premium Indonesian Coffee Beans
+             NISA BEROK 
             <br />
             for Global Markets
           </h1>
