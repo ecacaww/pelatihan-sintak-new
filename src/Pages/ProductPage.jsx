@@ -27,12 +27,12 @@ function HeroSection() {
       }}
     >      
     <div className="hero-overlay bg-stone-900/50"></div>
-      <div className="hero-content text-center text-rose-900 relative z-10">
+      <div className="hero-content text-center text-rose-700 relative z-10">
         <div className="max-w-2xl">
-          <h1 className="mb-5 text-5xl font-bold tracking-tight text-pink-800 drop-shadow-sm">
+          <h1 className="mb-5 text-5xl font-bold tracking-tight text-pink-300 drop-shadow-sm">
             Temukan Mochi Favoritmu!
           </h1>
-          <p className="mb-8 text-xl font-medium text-pink-700">
+          <p className="mb-8 text-xl font-medium text-pink-400">
             Camilan lembut, lucu, dan manis — sempurna untuk semua suasana hati 
           </p>
           <button className="btn bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 text-lg rounded-xl transition-all duration-300 transform hover:scale-105 border-none shadow-md hover:shadow-lg">
