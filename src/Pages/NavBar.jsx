@@ -170,7 +170,7 @@ function NavBar() {
           )}
           <div className="modal-action mt-6">
             <form method="dialog">
-              <button className="btn">Tutup</button>
+              <button className="btn">Close</button>
             </form>
           </div>
         </div>
