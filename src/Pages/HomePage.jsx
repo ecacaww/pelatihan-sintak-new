@@ -44,7 +44,7 @@ function HeroSection() {
           </h1>
           <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
             View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
-            <link rel="stylesheet" href="/about#section2" />
+            <link rel="stylesheet" href="/product#section2" />
           </button>
         </div>
       </div>
@@ -146,7 +146,7 @@ function Section3() {
             </div>
           </div>
 
-          <div className="card bg-gradient-to-r from-[#A78BFA] to-[#8C6BFA] border border-gradient-to-r from-[#A78BFA] to-[#8C6BFA] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+          <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
             <div className="p-6 bg-rose-400 text-white flex items-center gap-3">
               <TbTruckDelivery className="text-2xl" />
               <h3 className="text-xl font-semibold">Pengiriman Cepat</h3>
@@ -174,7 +174,7 @@ function Section4() {
     <section className="py-24 bg-rose-50">
       <div className="container mx-auto px-8 text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl font-bold text-[#A78BFA] mb-4">
+          <h1 className="text-4xl font-bold text-rose-900 mb-4">
             Mochi Favorit Kami
           </h1>
           <p className="text-rose-600 text-lg font-medium">
