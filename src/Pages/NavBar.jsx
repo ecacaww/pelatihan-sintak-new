@@ -153,7 +153,7 @@ function NavBar() {
         <div className="modal-box max-w-md">
           <h3 className="font-bold text-lg mb-4">Isi Keranjang</h3>
           {cartItems.length === 0 ? (
-            <p className="text-gray-500">Keranjang masih kosong.</p>
+            <p className="text-gray-500">Keranjang masih kosong</p>
           ) : (
             <ul className="space-y-3">
               {cartItems.map((item, index) => (
@@ -170,7 +170,7 @@ function NavBar() {
           )}
           <div className="modal-action mt-6">
             <form method="dialog">
-              <button className="btn">Close</button>
+              <button className="btn">Tutup</button>
             </form>
           </div>
         </div>
