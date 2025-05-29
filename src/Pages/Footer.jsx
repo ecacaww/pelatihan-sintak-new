@@ -168,10 +168,12 @@ function Footer() {
                     <FiPhone className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
                   <a
-                    
+                    href={`https://wa.me/${footerData.contact.phone.replace(/\s+/g, "").replace(/\+/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
                   >
-                    {footerData.contact.phone}
+                    {footerData.contact.phone} 
                   </a>
                 </div>
               </div>
