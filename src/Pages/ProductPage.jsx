@@ -25,7 +25,8 @@ function HeroSection() {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-    >
+    >      
+    <div className="hero-overlay bg-stone-900/50"></div>
       <div className="hero-content text-center text-rose-900 relative z-10">
         <div className="max-w-2xl">
           <h1 className="mb-5 text-5xl font-bold tracking-tight text-pink-800 drop-shadow-sm">
