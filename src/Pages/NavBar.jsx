@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-[#333333] backdrop-blur-md text-stone0 shadow-md border-b">
+    <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-purple-800 backdrop-blur-md text-stone0 shadow-md border-b">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,7 +55,7 @@ function NavBar() {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-2 text-[#333333] font-bold">
+        <ul className="menu menu-horizontal px-1 gap-2 text-purple-800 font-bold">
           <li>
             <Link
               to="/"
@@ -93,13 +93,13 @@ function NavBar() {
       <div className="navbar-end gap-2">
         <Link
           to="/quote"
-          className="btn btn-ghost text-[#333333] hover:text-amber-300 border border-stone-700 hover:border-amber-400/50 hover:bg-stone-800/50"
+          className="btn btn-ghost text-purple-800 hover:text-amber-300 border border-stone-700 hover:border-amber-400/50 hover:bg-stone-800/50"
         >
           Request Quote
         </Link>
         <Link
           to="/contact"
-          className="btn bg-[#DFF6FF] hover:bg-amber-700 border-amber-800 text-stone-100"
+          className="btn bg-[#DFF6FF] hover:bg-amber-700 border-amber-800 text-purple-800"
         >
           Contact Us
         </Link>
