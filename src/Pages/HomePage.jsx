@@ -70,7 +70,7 @@ function Section2() {
             <span className="inline-block bg-[#FFD6D6] text-[#5A3E28] px-3 py-1 rounded-full text-sm font-medium mb-4">
               Our Best Signature
             </span>
-            <div className="card bg-gradient-to-br from-[#FFEDF1] to-[#FFEDF1]/70 border-l-4 border-[#FF85A2] shadow-md hover:shadow-lg transition-shadow">
+            <div className="card bg-gradient-to-br from-[#FFEDF1] to-[#FFEDF1]/70 border-l-4 border-[#FF85A2] shadow-md hover:shadow-lg transition-shadow mb-3">
               <h1 className="text-4xl font-bold text-[#A78BFA] ml-2 mb-6 leading-tight ">
                 Deliciously Soft Mochi Snacks
                 <br />

@@ -51,37 +51,37 @@ function Section2() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProductCard
             image="/productcard1.jpeg"
-            title="Strawberry"
+            title="Strawberry Bliss"
             description="Mochi lembut berwarna merah muda dengan isian krim manis dan potongan stroberi segar. 
             Rasa manis dan asamnya berpadu sempurna, menciptakan pengalaman menyegarkan yang cocok dinikmati kapan saja."
           />
           <ProductCard
             image="/productcard2.jpeg"
-            title="Manggo"
+            title="Mango Tango"
             description="Kenikmatan tropis dalam setiap gigitan. Mochi mangga ini diisi 
             dengan krim mangga halus dan dihiasi potongan buah asli, memberikan rasa manis alami yang ringan dan memikat."
           />
           <ProductCard
             image="/productcard3.jpeg"
-            title="Matcha"
+            title="Matcha Deligh"
             description="Mochi dengan aroma khas matcha Jepang, berisi krim teh hijau 
            yang lembut dan sedikit pahit. Cocok untuk Anda yang menyukai rasa autentik dan menenangkan dari matcha premium."
           />
           <ProductCard
             image="/moci-c.jpg"
-            title="Chocolate"
+            title="Choco Lava"
             description="Kelezatan cokelat pekat dibungkus dalam mochi kenyal. Isian krim cokelat
             yang kaya rasa, berpadu dengan tekstur halus dan aroma cokelat yang menggoda setiap kali dinikmati."
           />
           <ProductCard
             image="/productcard5.jpeg"
-            title="Character"
+            title="Mochi Character"
             description="Mochi dengan bentuk karakter lucu dan warna-warni ceria, dibuat dengan detail yang menggemaskan. 
             Tidak hanya enak, tapi juga menyenangkan untuk dilihat — pilihan sempurna untuk anak-anak, hampers ulang tahun, atau hadiah spesial bagi orang tersayang."
           />
           <ProductCard
             image="/productcard6.jpeg"
-            title="Dango"
+            title="Dango Mochi"
             description="Mochi tradisional bergaya Jepang dengan tampilan bulat bertingkat. Menghadirkan
              rasa kacang dan kayu yang kuat, cocok dinikmati sebagai camilan klasik yang hangat dan mengenyangkan."
           />
@@ -93,7 +93,7 @@ function Section2() {
 
 function ProductCard(props) {
   return (
-    <div className="card bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+    <div className=" flex card bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
       <figure className="relative h-64 overflow-hidden">
         <img
           src={props.image}
