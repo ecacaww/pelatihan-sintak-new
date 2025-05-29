@@ -21,28 +21,28 @@ function HeroSection() {
     <div
       className="hero h-[450px] relative"
       style={{
-        backgroundImage: "url(/bg-mochi.jpg)",
+        backgroundImage: "url(/bg-mochi.jpg)", 
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
     >
-      <div className="hero-overlay bg-stone-900/60"></div>
-      <div className="hero-content text-center text-stone-100 relative z-10">
+      <div className="hero-content text-center text-rose-900 relative z-10">
         <div className="max-w-2xl">
-          <h1 className="mb-5 text-5xl font-bold tracking-tight">
-            Our Coffee Products
+          <h1 className="mb-5 text-5xl font-bold tracking-tight text-pink-800 drop-shadow-sm">
+            Temukan Mochi Favoritmu!
           </h1>
-          <p className="mb-8 text-xl font-medium">
-            Premium Indonesian Coffee Beans for Global Markets
+          <p className="mb-8 text-xl font-medium text-pink-700">
+            Camilan lembut, lucu, dan manis — sempurna untuk semua suasana hati 
           </p>
-          <button className="btn bg-amber-800 hover:bg-amber-700 border-amber-800 text-white px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105">
-            Request Sample <IoIosArrowRoundForward className="text-xl" />
+          <button className="btn bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 text-lg rounded-xl transition-all duration-300 transform hover:scale-105 border-none shadow-md hover:shadow-lg">
+            Lihat Produk <IoIosArrowRoundForward className="text-2xl ml-1" />
           </button>
         </div>
       </div>
     </div>
   );
 }
+
 
 function Section2() {
   return (
@@ -93,33 +93,32 @@ function Section2() {
 
 function ProductCard(props) {
   return (
-    <div className="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 border border-stone-200 rounded-lg overflow-hidden">
+    <div className="card bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
       <figure className="relative h-64 overflow-hidden">
         <img
           src={props.image}
           alt={props.title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </figure>
       <div className="card-body p-6">
-        <h2 className="card-title text-2xl font-bold text-stone-800 mb-2">
+        <h2 className="card-title text-2xl font-bold text-pink-800 mb-1">
           {props.title}
         </h2>
-        <p className="text-amber-700 font-medium mb-4">{props.from}</p>
 
-        <div className="space-y-3 mb-6">
-          <div className="flex justify-between">
-            <span className="font-semibold text-stone-600">Description</span>
-            <span className="text-stone-700">{props.description}</span>
-          </div>
+        <div className="mb-4">
+          <p className="text-stone-600 leading-relaxed">{props.description}</p>
         </div>
 
         <div className="card-actions">
-          <button className="btn bg-amber-800 hover:bg-amber-700 border-amber-800 text-white w-full py-3 transition-colors duration-300">
-            Buy Now
+          <button className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none">
+            Pesan Sekarang
           </button>
         </div>
       </div>
     </div>
   );
 }
+
+
+
