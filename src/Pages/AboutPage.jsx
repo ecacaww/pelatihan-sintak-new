@@ -309,7 +309,7 @@ function TestimonialsSection() {
       </div>
     </section>
   );
-}
+
 
   
   return (
