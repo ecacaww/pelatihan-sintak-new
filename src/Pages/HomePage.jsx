@@ -133,7 +133,7 @@ function Section3() {
               <h3 className="text-xl font-semibold">Bahan Berkualitas</h3>
             </div>
             <img
-              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.popmama.com%2Fbig-kid%2F6-9-years-old%2Fresep-kue-mochi-tiramisu-ide-camilan-kenyal-yang-disukai-anak-00-bbqjr-cdp759&psig=AOvVaw3uAxyEkNtxr4CkH51ShyQQ&ust=1748641452252000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJifmZ3TyY0DFQAAAAAdAAAAABAf"
+              src="https://image.popmama.com/post/20220519/mochi-jpg-65139eddcc0f8e740d3deb5d0edac6e7.jpg?tr=w-1920,f-webp,q-75&width=1920&format=webp&quality=75"
               alt="Premium Ingredients"
               className="w-full h-48 object-cover"
             />
