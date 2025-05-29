@@ -1,8 +1,23 @@
-import React from "react";
-import { FiCoffee } from "react-icons/fi";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  const [cartItems, setCartItems] = useState([
+    { id: 1, title: "Mochi Vanilla", image: "/path/to/image1.jpg" },
+    { id: 2, title: "Mochi Chocolate", image: "/path/to/image2.jpg" },
+    // Add other items as needed
+  ]);
+
+  const [modalOpen, setModalOpen] = useState(false); // state untuk membuka/tutup modal
+
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-purple-800 backdrop-blur-md text-stone0 shadow-md border-b">
       <div className="navbar-start">
@@ -25,7 +40,7 @@ function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-stone-800 rounded-box w-52 border border-stone-700 "
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-stone-800 rounded-box w-52 border border-stone-700"
           >
             <li>
               <Link to="/" className="hover:text-amber-300">
@@ -54,12 +69,13 @@ function NavBar() {
           <span className="text-[#333333] ml-2 font-bold">MoChewy</span>
         </Link>
       </div>
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2 text-purple-800 font-bold">
           <li>
             <Link
               to="/"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               Home
             </Link>
@@ -67,7 +83,7 @@ function NavBar() {
           <li>
             <Link
               to="/about"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               About Us
             </Link>
@@ -75,7 +91,7 @@ function NavBar() {
           <li>
             <Link
               to="/product"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               Mochi Products
             </Link>
@@ -83,7 +99,7 @@ function NavBar() {
           <li>
             <Link
               to="/contact"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               Contact
             </Link>
@@ -91,8 +107,8 @@ function NavBar() {
         </ul>
       </div>
 
-      {/* keranjang */}
-      <div className="flex ">
+      {/* Keranjang */}
+      <div className="flex">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
@@ -103,15 +119,16 @@ function NavBar() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />{" "}
+                />
               </svg>
-              <span className="badge badge-sm indicator-item">8</span>
+              <span className="badge badge-sm indicator-item">
+                {cartItems.length}
+              </span>
             </div>
           </div>
           <div
@@ -119,15 +136,52 @@ function NavBar() {
             className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
           >
             <div className="card-body">
-              <span className="text-lg font-bold">8 Items</span>
+              <span className="text-lg font-bold">
+                {cartItems.length} Items
+              </span>
               <span className="text-info">Subtotal: $999</span>
               <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
+                <button
+                  className="btn btn-primary btn-block"
+                  onClick={handleModalOpen}
+                >
+                  View cart
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal Isi Keranjang */}
+      {modalOpen && (
+        <dialog open className="modal">
+          <div className="modal-box max-w-md">
+            <h3 className="font-bold text-lg mb-4">Isi Keranjang</h3>
+            {cartItems.length === 0 ? (
+              <p className="text-gray-500">Keranjang masih kosong</p>
+            ) : (
+              <ul className="space-y-3">
+                {cartItems.map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-12 h-12 object-cover rounded"
+                    />
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div className="modal-action mt-6">
+              <button className="btn" onClick={handleModalClose}>
+                Tutup
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
     </div>
   );
 }
