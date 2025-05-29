@@ -71,12 +71,12 @@ function Section2() {
               Our Best Signature
             </span>
             <div className="card bg-gradient-to-br from-[#FFEDF1] to-[#FFEDF1]/70 border-l-4 border-[#FF85A2] shadow-md hover:shadow-lg transition-shadow">
-              <h1 className="text-4xl font-bold text-[#A78BFA] mb-6 leading-tight ">
+              <h1 className="text-4xl font-bold text-[#A78BFA] ml-2 mb-6 leading-tight ">
                 Deliciously Soft Mochi Snacks
                 <br />
                 Lovingly Made in Indonesia
               </h1>
-              <p className="text-[#5A3E28] mb-8 text-lg leading-relaxed">
+              <p className="text-[#5A3E28] mb-8 ml-2 text-lg leading-relaxed">
                 MoChewy menghadirkan camilan mochi lembut dan kenyal dengan cita
                 rasa khas Indonesia. Dibuat dari bahan-bahan berkualitas tinggi
                 dan resep pilihan, setiap gigitan MoChewy memberikan pengalaman
