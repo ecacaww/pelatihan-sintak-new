@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "./CartContext"; // import context
 
 function NavBar() {
   const { cartItems } = useCart(); // ambil cart
+  const [isModalOpen, setIsModalOpen] = useState(false); // State untuk kontrol modal
+
+  const openModal = () => {
+    setIsModalOpen(true); // Membuka modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Menutup modal
+  };
 
   return (
     <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-purple-800 backdrop-blur-md text-stone0 shadow-md border-b">
@@ -136,9 +145,7 @@ function NavBar() {
               <div className="card-actions">
                 <button
                   className="btn btn-primary btn-block"
-                  onClick={() =>
-                    document.getElementById("cart_modal").showModal()
-                  }
+                  onClick={openModal} // Menggunakan state untuk membuka modal
                 >
                   View cart
                 </button>
@@ -149,32 +156,37 @@ function NavBar() {
       </div>
 
       {/* Modal Isi Keranjang */}
-      <dialog id="cart_modal" className="modal">
-        <div className="modal-box max-w-md">
-          <h3 className="font-bold text-lg mb-4">Isi Keranjang</h3>
-          {cartItems.length === 0 ? (
-            <p className="text-gray-500">Keranjang masih kosong</p>
-          ) : (
-            <ul className="space-y-3">
-              {cartItems.map((item, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-12 h-12 object-cover rounded"
-                  />
-                  <span>{item.title}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-          <div className="modal-action mt-6">
-            <form method="dialog">
-              <button className="btn">Tutup</button>
-            </form>
+      {isModalOpen && (
+        <div className="modal modal-open">
+          <div className="modal-box max-w-md">
+            <h3 className="font-bold text-lg mb-4">Isi Keranjang</h3>
+            {cartItems.length === 0 ? (
+              <p className="text-gray-500">Keranjang masih kosong</p>
+            ) : (
+              <ul className="space-y-3">
+                {cartItems.map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-12 h-12 object-cover rounded"
+                    />
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div className="modal-action mt-6">
+              <button
+                className="btn"
+                onClick={closeModal} // Menutup modal dengan mengubah state
+              >
+                Tutup
+              </button>
+            </div>
           </div>
         </div>
-      </dialog>
+      )}
     </div>
   );
 }
