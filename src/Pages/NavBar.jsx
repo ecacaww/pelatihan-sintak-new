@@ -181,7 +181,7 @@ function NavBar() {
                 className="btn"
                 onClick={closeModal} // Menutup modal dengan mengubah state
               >
-                Tutup
+                Close
               </button>
             </div>
           </div>
