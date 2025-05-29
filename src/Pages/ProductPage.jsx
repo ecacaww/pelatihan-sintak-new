@@ -21,19 +21,19 @@ function HeroSection() {
     <div
       className="hero h-[450px] relative"
       style={{
-        backgroundImage: "url(/bg-mochi.jpg)", 
+        backgroundImage: "url(/bg-mochi.jpg)",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-    >      
-    <div className="hero-overlay bg-stone-900/50"></div>
+    >
+      <div className="hero-overlay bg-stone-900/50"></div>
       <div className="hero-content text-center text-rose-700 relative z-10">
         <div className="max-w-2xl">
           <h1 className="mb-5 text-5xl font-bold tracking-tight text-pink-300 drop-shadow-sm">
             Temukan Mochi Favoritmu!
           </h1>
           <p className="mb-8 text-xl font-medium text-pink-400">
-            Camilan lembut, lucu, dan manis — sempurna untuk semua suasana hati 
+            Camilan lembut, lucu, dan manis — sempurna untuk semua suasana hati
           </p>
           <button className="btn bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 text-lg rounded-xl transition-all duration-300 transform hover:scale-105 border-none shadow-md hover:shadow-lg">
             Lihat Produk <IoIosArrowRoundForward className="text-2xl ml-1" />
@@ -43,7 +43,6 @@ function HeroSection() {
     </div>
   );
 }
-
 
 function Section2() {
   return (
@@ -65,13 +64,13 @@ function Section2() {
           <ProductCard
             image="/productcard3.jpeg"
             title="Matcha"
-           description="Mochi dengan aroma khas matcha Jepang, berisi krim teh hijau 
+            description="Mochi dengan aroma khas matcha Jepang, berisi krim teh hijau 
            yang lembut dan sedikit pahit. Cocok untuk Anda yang menyukai rasa autentik dan menenangkan dari matcha premium."
           />
           <ProductCard
-            image="/productcard4.jpeg"
+            image="/moci-c.jpg"
             title="Chocolate"
-           description="Kelezatan cokelat pekat dibungkus dalam mochi kenyal. Isian krim cokelat
+            description="Kelezatan cokelat pekat dibungkus dalam mochi kenyal. Isian krim cokelat
             yang kaya rasa, berpadu dengan tekstur halus dan aroma cokelat yang menggoda setiap kali dinikmati."
           />
           <ProductCard
@@ -120,6 +119,3 @@ function ProductCard(props) {
     </div>
   );
 }
-
-
-
