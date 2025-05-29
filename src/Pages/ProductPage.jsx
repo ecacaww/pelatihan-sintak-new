@@ -112,7 +112,7 @@ function ProductCard(props) {
 
         <div className="card-actions">
           <button className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none">
-            Pesan Sekarang
+            Tambahkan Keranjang
           </button>
         </div>
       </div>
