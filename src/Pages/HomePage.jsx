@@ -58,9 +58,9 @@ function Section2() {
         <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
           <div className="lg:w-1/2">
             <img
-              src="https://ivebeen.cooking/_next/image?url=https%3A%2F%2Ffiles.ivebeen.cooking%2Fimages%2Fkopi-pahit%2Ftmp0mj2rp_q.jpg&w=640&q=75"
+              src="/mochis2.jpg"
               className="rounded-xl shadow-2xl w-full"
-              alt="Indonesian coffee beans"
+              alt="Mochi"
             />
           </div>
           <div className="lg:w-1/2">
