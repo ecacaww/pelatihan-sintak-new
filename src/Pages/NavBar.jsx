@@ -3,7 +3,7 @@ import { FiCoffee } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
-function NavBar({ cartItems = [] }) {
+function NavBar() {
   const [showSearch, setShowSearch] = useState(false);
   const [showNotif, setShowNotif] = useState(false);
   return (
