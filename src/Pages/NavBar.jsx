@@ -7,7 +7,7 @@ function NavBar() {
     <div
       className="navbar sticky top-0 z-50 backdrop-blur-md text-stone-800 shadow-md border-b"
       style={{
-        backgroundColor: "#CFF5E7", // pastel mint
+        backgroundColor: "#FFD6D6", // pastel mint
         borderColor: "#A8DF8E",
       }}
     >
@@ -57,7 +57,7 @@ function NavBar() {
         </div>
         <Link to="/" className="btn btn-ghost text-xl hover:bg-transparent">
           <FiCoffee className="text-amber-400 text-2xl" />
-          <span className="text-stone-100 ml-2 font-bold">Beaneca</span>
+          <span className="text-stone-100 ml-2 font-bold">MoChewy</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -83,7 +83,7 @@ function NavBar() {
               to="/product"
               className="font-medium text-stone-300 hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
-              Coffee Products
+              Mochi Products
             </Link>
           </li>
           <li>
