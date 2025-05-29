@@ -4,6 +4,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { RiGlobalLine } from "react-icons/ri";
 import { FiCoffee } from "react-icons/fi";
 import { LuLeaf } from "react-icons/lu";
+import { RiEmotionHappyLine } from "react-icons/ri";
+import { PiLeafBold } from "react-icons/pi";
+import { TbTruckDelivery } from "react-icons/tb";
 import Footer from "./Footer";
 
 function HomePage() {
@@ -58,7 +61,7 @@ function Section2() {
         <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
           <div className="lg:w-1/2">
             <img
-              src="public\mochis2.jpg"
+              src="/mocis2.jpg"
               className="rounded-xl shadow-2xl w-full"
               alt="Mochi"
             />
@@ -94,69 +97,69 @@ function Section3() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-8 text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <span className="inline-block bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
-            Why Choose Us
+          <span className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Kenapa MoChewy?
           </span>
           <h1 className="text-4xl font-bold text-stone-800 mb-4">
-            Our Commitment to Excellence
+            Komitmen Kami untuk Kelezatan dan Kebahagiaan
           </h1>
           <p className="text-stone-600 text-lg">
-            Discover why coffee businesses around the world trust Beaneca for
-            their premium Indonesian coffee needs.
+            MoChewy bukan sekadar camilan — kami hadir untuk memberikan
+            pengalaman manis, lembut, dan menyenangkan dalam setiap gigitan.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="card bg-stone-50 border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-amber-700 text-white flex items-center gap-3">
-              <RiGlobalLine className="text-2xl" />
-              <h3 className="text-xl font-semibold">Global Reach</h3>
+          <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div className="p-6 bg-rose-400 text-white flex items-center gap-3">
+              <RiEmotionHappyLine className="text-2xl" />
+              <h3 className="text-xl font-semibold">Rasa yang Bikin Bahagia</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/ac/6d/bd/ac6dbdcdef0e0d7cd4a265cf56235cae.jpg"
-              alt="Global Reach"
+              src="https://i.pinimg.com/564x/ae/17/53/ae17536bdce2c6bd3449ef594210016b.jpg"
+              alt="Happy Taste"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                Exporting to coffee professionals worldwide with trusted
-                delivery and streamlined logistics.
+                Setiap varian MoChewy diracik untuk menghadirkan rasa yang
+                lembut, manis, dan bikin ketagihan.
               </p>
             </div>
           </div>
 
-          <div className="card bg-stone-50 border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-amber-700 text-white flex items-center gap-3">
-              <FiCoffee className="text-2xl" />
-              <h3 className="text-xl font-semibold">Exceptional Quality</h3>
+          <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div className="p-6 bg-rose-400 text-white flex items-center gap-3">
+              <PiLeafBold className="text-2xl" />
+              <h3 className="text-xl font-semibold">Bahan Berkualitas</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/d2/89/56/d2895699e51298362aa80130ad06f69c.jpg"
-              alt="Exceptional Quality"
+              src="https://i.pinimg.com/564x/d7/31/8d/d7318d070ae13c60153a563b2d0fe3cb.jpg"
+              alt="Premium Ingredients"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                Every bean is carefully hand-selected and roasted to highlight
-                the unique flavor of its origin.
+                Dibuat dari bahan alami pilihan tanpa pengawet, aman dan cocok
+                untuk semua usia.
               </p>
             </div>
           </div>
 
-          <div className="card bg-stone-50 border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-amber-700 text-white flex items-center gap-3">
-              <LuLeaf className="text-2xl" />
-              <h3 className="text-xl font-semibold">Sustainable Practices</h3>
+          <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div className="p-6 bg-rose-400 text-white flex items-center gap-3">
+              <TbTruckDelivery className="text-2xl" />
+              <h3 className="text-xl font-semibold">Pengiriman Cepat</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/ce/7f/f7/ce7ff765d8ef4a090f7638f1061be258.jpg"
-              alt="Sustainable Practices"
+              src="https://i.pinimg.com/564x/12/90/0f/12900f46ae0d6ae352cf5d3f30a83e00.jpg"
+              alt="Fast Delivery"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                We partner with local farmers and cooperatives to promote
-                ethical, eco-friendly farming.
+                Dikirim langsung ke pintu rumahmu dengan kemasan aman dan tetap
+                segar.
               </p>
             </div>
           </div>
@@ -168,90 +171,93 @@ function Section3() {
 
 function Section4() {
   return (
-    <section className="py-24 bg-stone-100">
+    <section className="py-24 bg-rose-50">
       <div className="container mx-auto px-8 text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl font-bold text-stone-800 mb-4">
-            Featured Coffee Selections
+          <h1 className="text-4xl font-bold text-rose-900 mb-4">
+            Mochi Favorit Kami
           </h1>
-          <p className="text-amber-700 text-lg font-medium">
-            Explore our premium coffee varieties from different regions of
-            Indonesia.
+          <p className="text-rose-600 text-lg font-medium">
+            Jelajahi varian rasa mochi MoChewy yang paling disukai dan bikin
+            ketagihan!
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="card bg-white border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+          {/* Strawberry Mochi */}
+          <div className="card bg-white border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
             <figure className="h-60 overflow-hidden">
               <img
-                src="https://i.pinimg.com/736x/54/5f/9c/545f9c58f07f2eeb97e470edfca43700.jpg"
-                alt="Sumatra Mandheling"
+                src="/moci-st.jpg"
+                alt="Strawberry Mochi"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
             </figure>
             <div className="card-body p-6 text-left">
-              <h2 className="card-title text-stone-800 text-xl mb-1">
-                Sumatra Mandheling
+              <h2 className="card-title text-rose-800 text-xl mb-1">
+                Strawberry Bliss
               </h2>
-              <p className="text-amber-600 text-sm font-medium mb-4">
-                Aceh, North Sumatra
+              <p className="text-rose-500 text-sm font-medium mb-4">
+                Manis, segar, dan juicy
               </p>
               <p className="text-stone-600 text-sm mb-6">
-                Bold, earthy, and full-bodied with notes of dark chocolate,
-                cedar, and a subtle spice finish.
+                Mochi lembut berisi selai stroberi asli yang segar, cocok untuk
+                pencinta rasa buah.
               </p>
-              <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white w-full">
-                Buy Now
+              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+                Pesan Sekarang
               </button>
             </div>
           </div>
 
-          <div className="card bg-white border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+          {/* Matcha Mochi */}
+          <div className="card bg-white border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
             <figure className="h-60 overflow-hidden">
               <img
-                src="https://i.pinimg.com/736x/ac/6d/bd/ac6dbdcdef0e0d7cd4a265cf56235cae.jpg"
-                alt="Toraja Kalosi"
+                src="/moci-m.jpg"
+                alt="Matcha Mochi"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
             </figure>
             <div className="card-body p-6 text-left">
-              <h2 className="card-title text-stone-800 text-xl mb-1">
-                Toraja Kalosi
+              <h2 className="card-title text-rose-800 text-xl mb-1">
+                Matcha Delight
               </h2>
-              <p className="text-amber-600 text-sm font-medium mb-4">
-                South Sulawesi
+              <p className="text-rose-500 text-sm font-medium mb-4">
+                Pahit manis yang elegan
               </p>
               <p className="text-stone-600 text-sm mb-6">
-                Complex and well-balanced with notes of dark chocolate, spices,
-                and a clean, syrupy body.
+                Kombinasi lembut antara mochi dan isian matcha Jepang asli untuk
+                rasa yang khas dan memanjakan.
               </p>
-              <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white w-full">
-                Buy Now
+              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+                Pesan Sekarang
               </button>
             </div>
           </div>
 
-          <div className="card bg-white border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+          {/* Chocolate Mochi */}
+          <div className="card bg-white border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
             <figure className="h-60 overflow-hidden">
               <img
-                src="https://i.pinimg.com/736x/d2/89/56/d2895699e51298362aa80130ad06f69c.jpg"
-                alt="Java Robusta"
+                src="/moci-c.jpg"
+                alt="Chocolate Mochi"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
             </figure>
             <div className="card-body p-6 text-left">
-              <h2 className="card-title text-stone-800 text-xl mb-1">
-                Java Robusta
+              <h2 className="card-title text-rose-800 text-xl mb-1">
+                Choco Lava
               </h2>
-              <p className="text-amber-600 text-sm font-medium mb-4">
-                East Java
+              <p className="text-rose-500 text-sm font-medium mb-4">
+                Cokelat lumer di dalam
               </p>
               <p className="text-stone-600 text-sm mb-6">
-                Strong and bold with woody notes, a hint of dark chocolate, and
-                a smooth, lingering finish.
+                Isi cokelat yang meleleh saat digigit, bikin camilan ini cocok
+                untuk pecinta manis sejati.
               </p>
-              <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white w-full">
-                Buy Now
+              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+                Pesan Sekarang
               </button>
             </div>
           </div>

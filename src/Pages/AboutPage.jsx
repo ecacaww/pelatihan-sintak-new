@@ -424,7 +424,7 @@ function TestimonialsSection() {
       </div>
     </section>
   );
-}
+
 
 function GallerySection() {
   const galleryItems = [

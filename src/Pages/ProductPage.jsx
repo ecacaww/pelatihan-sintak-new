@@ -21,15 +21,17 @@ function HeroSection() {
     <div
       className="hero h-[450px] relative"
       style={{
-        backgroundImage: "url(src/assets/What_is_a_latte.jpg)",
+        backgroundImage: "url(/bg-mochi.jpg)",
         backgroundPosition: "center",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <div className="hero-overlay bg-stone-900/60"></div>
       <div className="hero-content text-center text-stone-100 relative z-10">
         <div className="max-w-2xl">
-          <h1 className="mb-5 text-5xl font-bold tracking-tight">Our Coffee Products</h1>
+          <h1 className="mb-5 text-5xl font-bold tracking-tight">
+            Our Coffee Products
+          </h1>
           <p className="mb-8 text-xl font-medium">
             Premium Indonesian Coffee Beans for Global Markets
           </p>
@@ -48,58 +50,40 @@ function Section2() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProductCard
-            image="src/assets/productcard1.jpg"
-            title="Sumatra Mandheling"
-            from="Aceh, North Sumatra"
-            processing="Wet-Hulled"
-            Altitude="1,200-1,500 masl"
-            flavor="Earthy, Herbal, Spicy"
-            available="Year-round"
+            image="/productcard1.jpeg"
+            title="Strawberry"
+            description="Mochi lembut berwarna merah muda dengan isian krim manis dan potongan stroberi segar. 
+            Rasa manis dan asamnya berpadu sempurna, menciptakan pengalaman menyegarkan yang cocok dinikmati kapan saja."
           />
           <ProductCard
-            image="src/assets/productcard2.jpg"
-            title="Java Preanger"
-            from="West Java"
-            processing="Washed"
-            Altitude="1,300-1,600 masl"
-            flavor="Citrus, Floral, Clean"
-            available="June - December"
+            image="/productcard2.jpeg"
+            title="Manggo"
+            description="Kenikmatan tropis dalam setiap gigitan. Mochi mangga ini diisi 
+            dengan krim mangga halus dan dihiasi potongan buah asli, memberikan rasa manis alami yang ringan dan memikat."
           />
           <ProductCard
-            image="src/assets/productcard3.jpg"
-            title="Bali Kintamani"
-            from="Bali"
-            processing="Wet Process"
-            Altitude="1,200-1,600 masl"
-            flavor="Lemon, Caramel, Nutty"
-            available="May - October"
+            image="/productcard3.jpeg"
+            title="Matcha"
+           description="Mochi dengan aroma khas matcha Jepang, berisi krim teh hijau 
+           yang lembut dan sedikit pahit. Cocok untuk Anda yang menyukai rasa autentik dan menenangkan dari matcha premium."
           />
           <ProductCard
-            image="src/assets/productcard4.jpg"
-            title="Flores Bajawa"
-            from="East Nusa Tenggara"
-            processing="Semi-Washed"
-            Altitude="1,300-1,800 masl"
-            flavor="Chocolate, Spice, Floral"
-            available="June - November"
+            image="/productcard4.jpeg"
+            title="Chocolate"
+           description="Kelezatan cokelat pekat dibungkus dalam mochi kenyal. Isian krim cokelat
+            yang kaya rasa, berpadu dengan tekstur halus dan aroma cokelat yang menggoda setiap kali dinikmati."
           />
           <ProductCard
-            image="src/assets/productcard5.jpg"
-            title="Toraja Kalosi"
-            from="South Sulawesi"
-            processing="Wet-Hulled"
-            Altitude="1,400-1,800 masl"
-            flavor="Dark Chocolate, Spicy, Earthy"
-            available="Year-round"
+            image="/productcard5.jpeg"
+            title="Character"
+            description="Mochi dengan bentuk karakter lucu dan warna-warni ceria, dibuat dengan detail yang menggemaskan. 
+            Tidak hanya enak, tapi juga menyenangkan untuk dilihat — pilihan sempurna untuk anak-anak, hampers ulang tahun, atau hadiah spesial bagi orang tersayang."
           />
           <ProductCard
-            image="src/assets/java-preanger.jpg"
-            title="Java Robusta"
-            from="East Java"
-            processing="Dry Process"
-            Altitude="600-900 masl"
-            flavor="Woody, Nutty, Strong"
-            available="Year-round"
+            image="/productcard6.jpeg"
+            title="Dango"
+            description="Mochi tradisional bergaya Jepang dengan tampilan bulat bertingkat. Menghadirkan
+             rasa kacang dan kayu yang kuat, cocok dinikmati sebagai camilan klasik yang hangat dan mengenyangkan."
           />
         </div>
       </div>
@@ -118,25 +102,15 @@ function ProductCard(props) {
         />
       </figure>
       <div className="card-body p-6">
-        <h2 className="card-title text-2xl font-bold text-stone-800 mb-2">{props.title}</h2>
+        <h2 className="card-title text-2xl font-bold text-stone-800 mb-2">
+          {props.title}
+        </h2>
         <p className="text-amber-700 font-medium mb-4">{props.from}</p>
-        
+
         <div className="space-y-3 mb-6">
-          <div className="flex justify-between border-b border-stone-100 pb-2">
-            <span className="font-semibold text-stone-600">Processing</span>
-            <span className="text-stone-700">{props.processing}</span>
-          </div>
-          <div className="flex justify-between border-b border-stone-100 pb-2">
-            <span className="font-semibold text-stone-600">Altitude</span>
-            <span className="text-stone-700">{props.Altitude}</span>
-          </div>
-          <div className="flex justify-between border-b border-stone-100 pb-2">
-            <span className="font-semibold text-stone-600">Flavor Notes</span>
-            <span className="text-stone-700">{props.flavor}</span>
-          </div>
           <div className="flex justify-between">
-            <span className="font-semibold text-stone-600">Available</span>
-            <span className="text-stone-700">{props.available}</span>
+            <span className="font-semibold text-stone-600">Description</span>
+            <span className="text-stone-700">{props.description}</span>
           </div>
         </div>
 
