@@ -156,7 +156,7 @@ function Footer() {
                     <FiMail className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
                   <a
-                    
+                    href="/contact"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
                   >
                     {footerData.contact.email}
