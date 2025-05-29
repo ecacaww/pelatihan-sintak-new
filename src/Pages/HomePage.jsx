@@ -4,9 +4,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { RiGlobalLine } from "react-icons/ri";
 import { FiCoffee } from "react-icons/fi";
 import { LuLeaf } from "react-icons/lu";
-import { PiLeafThin } from "react-icons/pi";
-import { GiJapan } from "react-icons/gi";
-import { TbBrandEco } from "react-icons/tb";
+import { RiEmotionHappyLine } from "react-icons/ri";
+import { PiLeafBold } from "react-icons/pi";
+import { TbTruckDelivery } from "react-icons/tb";
 import Footer from "./Footer";
 
 function HomePage() {
@@ -61,7 +61,7 @@ function Section2() {
         <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
           <div className="lg:w-1/2">
             <img
-              src="/moci2.jpg"
+              src="/mocis2.jpg"
               className="rounded-xl shadow-2xl w-full"
               alt="Mochi"
             />
@@ -98,71 +98,68 @@ function Section3() {
       <div className="container mx-auto px-8 text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <span className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
-            Why MoChewy?
+            Kenapa MoChewy?
           </span>
           <h1 className="text-4xl font-bold text-stone-800 mb-4">
-            Soft. Sweet. Satisfying.
+            Komitmen Kami untuk Kelezatan dan Kebahagiaan
           </h1>
           <p className="text-stone-600 text-lg">
-            Rasakan kenikmatan mochi lembut khas MoChewy—dibuat dari bahan
-            alami, dikemas dengan cinta, dan siap maniskan harimu.
+            MoChewy bukan sekadar camilan — kami hadir untuk memberikan
+            pengalaman manis, lembut, dan menyenangkan dalam setiap gigitan.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Authentic Ingredients */}
           <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-rose-300 text-white flex items-center gap-3">
-              <PiLeafThin className="text-2xl" />
-              <h3 className="text-xl font-semibold">Bahan Alami</h3>
+            <div className="p-6 bg-rose-400 text-white flex items-center gap-3">
+              <RiEmotionHappyLine className="text-2xl" />
+              <h3 className="text-xl font-semibold">Rasa yang Bikin Bahagia</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/5e/8e/1e/5e8e1e8232a5d5a7f06d20f4efc69e6b.jpg"
-              alt="Natural Ingredients"
+              src="https://i.pinimg.com/564x/ae/17/53/ae17536bdce2c6bd3449ef594210016b.jpg"
+              alt="Happy Taste"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                Menggunakan bahan-bahan berkualitas tanpa pengawet untuk rasa
-                mochi yang aman dan nikmat.
+                Setiap varian MoChewy diracik untuk menghadirkan rasa yang
+                lembut, manis, dan bikin ketagihan.
               </p>
             </div>
           </div>
 
-          {/* Japanese-Inspired Recipe */}
           <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-rose-300 text-white flex items-center gap-3">
-              <GiJapan className="text-2xl" />
-              <h3 className="text-xl font-semibold">Resep Jepang Asli</h3>
+            <div className="p-6 bg-rose-400 text-white flex items-center gap-3">
+              <PiLeafBold className="text-2xl" />
+              <h3 className="text-xl font-semibold">Bahan Berkualitas</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/b2/8a/38/b28a38550b9d3a3b2b179eab90538ac4.jpg"
-              alt="Japanese Recipe"
+              src="https://i.pinimg.com/564x/d7/31/8d/d7318d070ae13c60153a563b2d0fe3cb.jpg"
+              alt="Premium Ingredients"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                Diinspirasi dari tradisi Jepang dengan sentuhan rasa khas
-                Indonesia.
+                Dibuat dari bahan alami pilihan tanpa pengawet, aman dan cocok
+                untuk semua usia.
               </p>
             </div>
           </div>
 
-          {/* Eco-Friendly Packaging */}
           <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-rose-300 text-white flex items-center gap-3">
-              <TbBrandEco className="text-2xl" />
-              <h3 className="text-xl font-semibold">Ramah Lingkungan</h3>
+            <div className="p-6 bg-rose-400 text-white flex items-center gap-3">
+              <TbTruckDelivery className="text-2xl" />
+              <h3 className="text-xl font-semibold">Pengiriman Cepat</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/87/26/6a/87266af9aef1e3cf7de3e14279a4d0f4.jpg"
-              alt="Eco Friendly"
+              src="https://i.pinimg.com/564x/12/90/0f/12900f46ae0d6ae352cf5d3f30a83e00.jpg"
+              alt="Fast Delivery"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                Kami menggunakan kemasan ramah lingkungan untuk mendukung bumi
-                yang lebih hijau.
+                Dikirim langsung ke pintu rumahmu dengan kemasan aman dan tetap
+                segar.
               </p>
             </div>
           </div>
