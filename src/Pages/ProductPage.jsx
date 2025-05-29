@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import {} from "../CartContext";
+import { useCart } from "../CartContext";
 
 function ProductPage() {
   // Sample product data
@@ -112,15 +112,7 @@ function Section2({ products }) {
 }
 
 function ProductCard({ product }) {
-  const addToCart = () => {
-    // Get the NavBar component's addToCart function
-    const navBar = document.querySelector("nav");
-    if (navBar && navBar.__reactProps$ && navBar.__reactProps$.addToCart) {
-      navBar.__reactProps$.addToCart(product);
-    } else {
-      console.error("Could not find addToCart function in NavBar");
-    }
-  };
+  const { addToCart } = useCart();
 
   return (
     <div className="flex card bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
@@ -149,7 +141,7 @@ function ProductCard({ product }) {
         <div className="card-actions">
           <button
             className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
-            onClick={addToCart}
+            onClick={() => addToCart(product)}
           >
             Tambahkan Keranjang
           </button>
