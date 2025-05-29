@@ -26,8 +26,7 @@ function HeroSection() {
     <div
       className="hero h-[90vh] relative"
       style={{
-        backgroundImage:
-          "url(https://i.pinimg.com/736x/c6/c8/d4/c6c8d432abbb55f69077f6eec22a974f.jpg)",
+        backgroundImage: "\bg-mochi.jpg",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
@@ -39,12 +38,12 @@ function HeroSection() {
             BEANECA
           </h2>
           <h1 className="mb-8 text-5xl font-bold text-white leading-tight">
-            Premium Indonesian Coffee Beans
+            Soft, Sweet, and Irresistible
             <br />
-            for Global Markets
+            The Mochi Experience
           </h1>
           <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white px-8 py-3 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-            View Coffee Catalog <IoIosArrowRoundForward className="text-xl" />
+            View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
           </button>
         </div>
       </div>
