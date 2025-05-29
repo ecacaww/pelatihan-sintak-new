@@ -58,7 +58,7 @@ function Section2() {
         <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
           <div className="lg:w-1/2">
             <img
-              src="\mochis2.jpg"
+              src="public\mochis2.jpg"
               className="rounded-xl shadow-2xl w-full"
               alt="Mochi"
             />
