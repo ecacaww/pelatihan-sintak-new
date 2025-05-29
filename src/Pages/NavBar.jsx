@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-[#2C2C2C] backdrop-blur-md text-stone0 shadow-md border-b">
+    <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-[#333333] backdrop-blur-md text-stone0 shadow-md border-b">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +50,7 @@ function NavBar() {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl hover:bg-transparent">
-          <FiCoffee className="text-amber-400 text-2xl" />
+          <FiCoffee className="text-[#333333] text-2xl" />
           <span className="text-stone-100 ml-2 font-bold">MoChewy</span>
         </Link>
       </div>
