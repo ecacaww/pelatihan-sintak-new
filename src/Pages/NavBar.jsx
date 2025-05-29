@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div
-      className="navbar sticky top-0 z-50 backdrop-blur-md text-stone-800 shadow-md border-b"
-      style={{
-        backgroundColor: "#FFD6D6", // pastel mint
-        borderColor: "#A8DF8E",
-      }}
-    >
+    <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-[#2C2C2C] backdrop-blur-md text-stone0 shadow-md border-b">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,7 +39,7 @@ function NavBar() {
             </li>
             <li>
               <Link to="/product" className="hover:text-amber-300">
-                Coffee Products
+                Mochi Products
               </Link>
             </li>
             <li>

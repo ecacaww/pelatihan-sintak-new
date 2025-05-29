@@ -33,9 +33,9 @@ function HeroSection() {
     >
       <div className="hero-overlay bg-stone-900/50"></div>
       <div className="hero-content text-neutral-content flex justify-start items-center h-full px-0">
-        <div className="w-1/2 text-left pl-16">
+        <div className="w-1/2 text-left pl-20">
           <h2 className="mb-4 text-2xl font-semibold text-amber-100 tracking-wider">
-            BEANECA
+            MoChewy
           </h2>
           <h1 className="mb-8 text-5xl font-bold text-white leading-tight">
             Soft, Sweet, and Irresistible
