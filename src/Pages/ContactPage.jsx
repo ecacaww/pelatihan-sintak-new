@@ -349,13 +349,13 @@ function ContactInfoSection() {
               <div className="p-4 bg-gradient-to-br from-[#FF85A2] to-[#FF6B8B] rounded-full mb-6 text-white shadow-lg group-hover:rotate-[360deg] transition-transform duration-500">
                 <FiMapPin className="text-2xl" />
               </div>
-              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">Kantor Pusat</h3>
+              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">Toko Kami</h3>
               <address className="not-italic text-[#5A3E28]">
-                Jl. Sriwijaya No. 123
+               Jl. Sungai Sahang, Palembang  
                 <br />
                 Palembang, South Sumatra
                 <br />
-                Indonesia 30139
+                Indonesia 30151
               </address>
               <div className="mt-4">
                 <a
@@ -398,7 +398,7 @@ function ContactInfoSection() {
               </div>
               <div className="mt-4">
                 <a
-                  href="mailto:hello@mochewy.com"
+                  href="/contact"
                   className="btn btn-sm bg-[#E8E1F4] text-[#A78BFA] border-none hover:bg-[#A78BFA] hover:text-white transition-colors"
                 >
                   Kirim Email
@@ -434,7 +434,7 @@ function ContactInfoSection() {
                   <FaWhatsapp className="text-xl" />
                 </a>
                 <a
-                  href="https://instagram.com/mochewy"
+                  href="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-[#E8E1F4] text-[#A78BFA] rounded-full hover:bg-[#A78BFA] hover:text-white transition-colors"
@@ -443,7 +443,7 @@ function ContactInfoSection() {
                   <FaInstagram className="text-xl" />
                 </a>
                 <a
-                  href="https://linkedin.com/company/mochewy"
+                  href="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-[#FFEDF1] text-[#FF85A2] rounded-full hover:bg-[#FF85A2] hover:text-white transition-colors"
@@ -520,7 +520,7 @@ function ContactFaqSection() {
       <div className="text-center mt-12">
         <p className="text-[#5A3E28] mb-4">Masih punya pertanyaan lain?</p>
         <a
-          href="mailto:hello@mochewy.com"
+          href="/contact"
           className="btn bg-gradient-to-r from-[#A78BFA] to-[#8C6BFA] text-white border-none hover:shadow-lg transition-all hover:-translate-y-1"
         >
           <FiMail className="mr-2" /> Hubungi Tim Kami
