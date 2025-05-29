@@ -64,19 +64,20 @@ function Section2() {
             />
           </div>
           <div className="lg:w-1/2">
-            <span className="inline-block bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
-              Direct from Indonesia
+            <span className="inline-block bg-[#FFD6D6] text-amber-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+              Our Best Signature
             </span>
-            <h1 className="text-4xl font-bold text-stone-800 mb-6 leading-tight">
-              Exceptional Coffee Beans from
+            <h1 className="text-4xl font-bold text-purple-800 mb-6 leading-tight">
+              Deliciously Soft Mochi Snacks
               <br />
-              the Heart of Indonesia
+              Lovingly Made in Indonesia
             </h1>
-            <p className="text-stone-600 mb-8 text-lg leading-relaxed">
-              Beaneca works directly with local farmers across Indonesia to
-              source the finest Arabica and Robusta coffee beans. Our commitment
-              to quality and sustainability ensures that every bean we export
-              meets the highest standards.
+            <p className="text-pink-700 mb-8 text-lg leading-relaxed">
+              MoChewy menghadirkan camilan mochi lembut dan kenyal dengan cita
+              rasa khas Indonesia. Dibuat dari bahan-bahan berkualitas tinggi
+              dan resep pilihan, setiap gigitan MoChewy memberikan pengalaman
+              manis yang tak terlupakan. Kami berkomitmen pada kualitas, rasa
+              otentik, dan kebahagiaan di setiap kemasan.
             </p>
             <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white px-8 py-3 text-lg">
               Learn About Our Process
