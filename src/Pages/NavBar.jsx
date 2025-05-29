@@ -1,53 +1,21 @@
-import React, { useState } from "react";
-import { FiCoffee } from "react-icons/fi";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../CartContext"; // Adjust the path as needed
 
 function NavBar() {
-  const [cartItems, setCartItems] = useState([]);
-  const [subtotal, setSubtotal] = useState(0);
-
-  // Function to add item to cart (you'll call this from your product components)
-  const addToCart = (product) => {
-    setCartItems((prevItems) => {
-      // Check if product already exists in cart
-      const existingItem = prevItems.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prevItems, { ...product, quantity: 1 }];
-    });
-
-    setSubtotal((prev) => prev + product.price);
-  };
-
-  // Function to remove item from cart
-  const removeFromCart = (productId) => {
-    setCartItems((prevItems) => {
-      const itemToRemove = prevItems.find((item) => item.id === productId);
-      if (itemToRemove && itemToRemove.quantity > 1) {
-        return prevItems.map((item) =>
-          item.id === productId
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        );
-      }
-      return prevItems.filter((item) => item.id !== productId);
-    });
-
-    const item = cartItems.find((i) => i.id === productId);
-    if (item) {
-      setSubtotal((prev) => prev - item.price);
-    }
-  };
+  const { cartItems, subtotal, addToCart, removeFromCart } = useCart();
 
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
     0
   );
+
+  const handleRemoveItem = (item) => {
+    // Remove the entire item from cart (all quantities)
+    removeFromCart(item.id);
+    // Adjust subtotal by removing all quantities of this item
+    // Note: This is handled in the CartContext's removeFromCart function
+  };
 
   return (
     <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-purple-800 backdrop-blur-md text-stone0 shadow-md border-b">
@@ -249,14 +217,7 @@ function NavBar() {
                         <td>
                           <button
                             className="btn btn-xs btn-error"
-                            onClick={() => {
-                              setCartItems((prev) =>
-                                prev.filter((i) => i.id !== item.id)
-                              );
-                              setSubtotal(
-                                (prev) => prev - item.price * item.quantity
-                              );
-                            }}
+                            onClick={() => handleRemoveItem(item)}
                           >
                             Remove
                           </button>
