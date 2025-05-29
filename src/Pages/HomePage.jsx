@@ -27,7 +27,7 @@ function HeroSection() {
       className="hero h-[90vh] relative"
       style={{
         backgroundImage:
-          "url(https://i.pinimg.com/736x/fb/56/46/fb56461c72acc88db3e59f7fe7dbef6f.jpg)",
+          "url(https://i.pinimg.com/736x/c6/c8/d4/c6c8d432abbb55f69077f6eec22a974f.jpg)",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
