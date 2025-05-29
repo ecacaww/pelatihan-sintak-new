@@ -1,9 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { RiGlobalLine } from "react-icons/ri";
-import { FiCoffee } from "react-icons/fi";
-import { LuLeaf } from "react-icons/lu";
 import { RiEmotionHappyLine } from "react-icons/ri";
 import { PiLeafBold } from "react-icons/pi";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -118,7 +115,7 @@ function Section3() {
               <h3 className="text-xl font-semibold">Rasa yang Bikin Bahagia</h3>
             </div>
             <img
-              src="https://i.pinimg.com/564x/ae/17/53/ae17536bdce2c6bd3449ef594210016b.jpg"
+              src="https://cdn1-production-images-kly.akamaized.net/vR_4OOBO8Dll-Aa9_xG_q8yr7xQ=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5024413/original/038198800_1732615844-cara-membuat-mochi-bites.jpg"
               alt="Happy Taste"
               className="w-full h-48 object-cover"
             />
@@ -136,7 +133,7 @@ function Section3() {
               <h3 className="text-xl font-semibold">Bahan Berkualitas</h3>
             </div>
             <img
-              src="https://i.pinimg.com/564x/d7/31/8d/d7318d070ae13c60153a563b2d0fe3cb.jpg"
+              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.popmama.com%2Fbig-kid%2F6-9-years-old%2Fresep-kue-mochi-tiramisu-ide-camilan-kenyal-yang-disukai-anak-00-bbqjr-cdp759&psig=AOvVaw3uAxyEkNtxr4CkH51ShyQQ&ust=1748641452252000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJifmZ3TyY0DFQAAAAAdAAAAABAf"
               alt="Premium Ingredients"
               className="w-full h-48 object-cover"
             />
@@ -154,7 +151,7 @@ function Section3() {
               <h3 className="text-xl font-semibold">Pengiriman Cepat</h3>
             </div>
             <img
-              src="https://i.pinimg.com/564x/12/90/0f/12900f46ae0d6ae352cf5d3f30a83e00.jpg"
+              src="/moci-delivery.jpg"
               alt="Fast Delivery"
               className="w-full h-48 object-cover"
             />
