@@ -42,9 +42,9 @@ function HeroSection() {
             <br />
             <span className="text-pink-400">The Mochi Experience</span>
           </h1>
-          <button className="btnbg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] hover:bg-amber-600 border-amber-700 text-white px-8 py-3 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+          <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
             View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
-            <link rel="stylesheet" href="/AboutPage.jsx#section2" />
+            <link rel="stylesheet" href="/about#section2" />
           </button>
         </div>
       </div>
