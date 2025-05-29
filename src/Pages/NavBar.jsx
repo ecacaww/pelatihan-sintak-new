@@ -1,25 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../CartContext"; // Adjust the path as needed
+import { useCart } from "..CartContextA/CartContext"; // import context
 
 function NavBar() {
-  const { cartItems, subtotal, addToCart, removeFromCart } = useCart();
+  const { cartItems } = useCart(); // ambil cart
+  const [isModalOpen, setIsModalOpen] = useState(false); // State untuk kontrol modal
 
-  const totalItems = cartItems.reduce(
-    (total, item) => total + item.quantity,
-    0
-  );
+  const openModal = () => {
+    setIsModalOpen(true); // Membuka modal
+  };
 
-  const handleRemoveItem = (item) => {
-    // Remove the entire item from cart (all quantities)
-    removeFromCart(item.id);
-    // Adjust subtotal by removing all quantities of this item
-    // Note: This is handled in the CartContext's removeFromCart function
+  const closeModal = () => {
+    setIsModalOpen(false); // Menutup modal
   };
 
   return (
     <div className="navbar sticky top-0 z-50 bg-[#FFD6D6] text-purple-800 backdrop-blur-md text-stone0 shadow-md border-b">
       <div className="navbar-start">
+        {/* Dropdown Mobile */}
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -63,17 +61,21 @@ function NavBar() {
             </li>
           </ul>
         </div>
+
+        {/* Logo */}
         <Link to="/" className="btn btn-ghost text-xl hover:bg-transparent">
           <img src="logo-moci.jpg" className="text-[#333333] text-2xl" />
           <span className="text-[#333333] ml-2 font-bold">MoChewy</span>
         </Link>
       </div>
+
+      {/* Menu Desktop */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2 text-purple-800 font-bold">
           <li>
             <Link
               to="/"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               Home
             </Link>
@@ -81,7 +83,7 @@ function NavBar() {
           <li>
             <Link
               to="/about"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               About Us
             </Link>
@@ -89,7 +91,7 @@ function NavBar() {
           <li>
             <Link
               to="/product"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               Mochi Products
             </Link>
@@ -97,7 +99,7 @@ function NavBar() {
           <li>
             <Link
               to="/contact"
-              className="font-medium  hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
+              className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
               Contact
             </Link>
@@ -105,7 +107,7 @@ function NavBar() {
         </ul>
       </div>
 
-      {/* keranjang */}
+      {/* Keranjang */}
       <div className="flex">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -121,36 +123,31 @@ function NavBar() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 
+                    2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 
+                    100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-              {totalItems > 0 && (
-                <span className="badge badge-sm indicator-item bg-purple-600 text-white">
-                  {totalItems}
-                </span>
-              )}
+              <span className="badge badge-sm indicator-item">
+                {cartItems.length}
+              </span>
             </div>
           </div>
+
           <div
             tabIndex={0}
-            className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-72 shadow"
+            className="card card-compact dropdown-content bg-base-100 z-10 mt-3 w-52 shadow"
           >
             <div className="card-body">
               <span className="text-lg font-bold">
-                {totalItems} {totalItems === 1 ? "Item" : "Items"}
-              </span>
-              <span className="text-info">
-                Subtotal: ${subtotal.toFixed(2)}
+                {cartItems.length} Items
               </span>
               <div className="card-actions">
                 <button
-                  className="btn btn-primary w-full"
-                  onClick={() =>
-                    document.getElementById("cart_modal").showModal()
-                  }
-                  disabled={totalItems === 0}
+                  className="btn btn-primary btn-block"
+                  onClick={openModal} // Menggunakan state untuk membuka modal
                 >
-                  View Cart
+                  View cart
                 </button>
               </div>
             </div>
@@ -158,106 +155,38 @@ function NavBar() {
         </div>
       </div>
 
-      {/* Cart Modal */}
-      <dialog id="cart_modal" className="modal">
-        <div className="modal-box max-w-3xl">
-          <h3 className="font-bold text-2xl">Your Shopping Cart</h3>
-
-          {cartItems.length === 0 ? (
-            <div className="py-8 text-center">
-              <p>Your cart is empty</p>
-            </div>
-          ) : (
-            <>
-              <div className="overflow-x-auto mt-4">
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th>Product</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Total</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {cartItems.map((item) => (
-                      <tr key={item.id}>
-                        <td>
-                          <div className="flex items-center gap-3">
-                            <div className="avatar">
-                              <div className="mask mask-squircle w-12 h-12">
-                                <img src={item.image} alt={item.name} />
-                              </div>
-                            </div>
-                            <div>
-                              <div className="font-bold">{item.name}</div>
-                            </div>
-                          </div>
-                        </td>
-                        <td>${item.price.toFixed(2)}</td>
-                        <td>
-                          <div className="flex items-center gap-2">
-                            <button
-                              className="btn btn-xs btn-circle"
-                              onClick={() => removeFromCart(item.id)}
-                            >
-                              -
-                            </button>
-                            <span>{item.quantity}</span>
-                            <button
-                              className="btn btn-xs btn-circle"
-                              onClick={() => addToCart(item)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </td>
-                        <td>${(item.price * item.quantity).toFixed(2)}</td>
-                        <td>
-                          <button
-                            className="btn btn-xs btn-error"
-                            onClick={() => handleRemoveItem(item)}
-                          >
-                            Remove
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="flex justify-end mt-4">
-                <div className="text-right">
-                  <p className="text-lg">
-                    <span className="font-bold">Subtotal:</span> $
-                    {subtotal.toFixed(2)}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    Shipping calculated at checkout
-                  </p>
-                </div>
-              </div>
-            </>
-          )}
-
-          <div className="modal-action">
-            <form method="dialog">
-              <button className="btn">Continue Shopping</button>
-            </form>
-            {cartItems.length > 0 && (
-              <Link to="/checkout" className="btn btn-primary">
-                Proceed to Checkout
-              </Link>
+      {/* Modal Isi Keranjang */}
+      {isModalOpen && (
+        <div className="modal modal-open">
+          <div className="modal-box max-w-md">
+            <h3 className="font-bold text-lg mb-4">Isi Keranjang</h3>
+            {cartItems.length === 0 ? (
+              <p className="text-gray-500">Keranjang masih kosong</p>
+            ) : (
+              <ul className="space-y-3">
+                {cartItems.map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-12 h-12 object-cover rounded"
+                    />
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
             )}
+            <div className="modal-action mt-6">
+              <button
+                className="btn"
+                onClick={closeModal} // Menutup modal dengan mengubah state
+              >
+                Tutup
+              </button>
+            </div>
           </div>
         </div>
-
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
-        </form>
-      </dialog>
+      )}
     </div>
   );
 }
