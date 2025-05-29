@@ -13,7 +13,6 @@ function AboutPage() {
       <CompanyProfileSection />
       <CoreValuesSection />
       <TestimonialsSection />
-      <TeamSection />
       <GallerySection />
       <Footer />
     </div>
@@ -312,33 +311,6 @@ function TestimonialsSection() {
   );
 }
 
-function TeamSection() {
-  const teamMembers = [
-    {
-      name: "Rina Wijaya",
-      position: "Founder & Head Chef",
-      bio: "Pecinta dessert dengan pengalaman 10 tahun di bidang pastry. Spesialis mochi dengan sentuhan kreatif.",
-      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"
-    },
-    {
-      name: "Budi Santoso",
-      position: "Co-Founder & CEO",
-      bio: "Ahli bisnis F&B yang membawa MoChewy dari dapur rumahan menjadi merek ternama.",
-      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a"
-    },
-    {
-      name: "Siti Aisyah",
-      position: "Product Development",
-      bio: "Bertanggung jawab menciptakan varian rasa baru yang selalu dinanti pelanggan.",
-      img: "https://images.unsplash.com/photo-1580489944761-15a19d654956"
-    },
-    {
-      name: "Andi Pratama",
-      position: "Marketing Director",
-      bio: "Master di balik strategi pemasaran kreatif MoChewy di media sosial.",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-    }
-  ];
   
   return (
     <section className="py-20 bg-purple-50">
