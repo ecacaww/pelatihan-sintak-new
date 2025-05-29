@@ -9,17 +9,17 @@ function Footer() {
     socialMedia: [
       {
         name: "Instagram",
-        url: "https://instagram.com/mochewy",
+        url: "/contact",
         icon: FiInstagram,
       },
       {
         name: "Facebook",
-        url: "https://facebook.com/mochewy",
+        url: "/contact",
         icon: FiFacebook,
       },
       {
         name: "Twitter",
-        url: "https://twitter.com/mochewy",
+        url: "/contact",
         icon: FiTwitter,
       },
     ],
