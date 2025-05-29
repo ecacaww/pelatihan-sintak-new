@@ -4,6 +4,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { RiGlobalLine } from "react-icons/ri";
 import { FiCoffee } from "react-icons/fi";
 import { LuLeaf } from "react-icons/lu";
+import { PiLeafThin } from "react-icons/pi";
+import { GiJapan } from "react-icons/gi";
+import { TbBrandEco } from "react-icons/tb";
 import Footer from "./Footer";
 
 function HomePage() {
@@ -58,7 +61,7 @@ function Section2() {
         <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
           <div className="lg:w-1/2">
             <img
-              src="\moci2.jpg"
+              src="/moci2.jpg"
               className="rounded-xl shadow-2xl w-full"
               alt="Mochi"
             />
@@ -94,69 +97,72 @@ function Section3() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-8 text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <span className="inline-block bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
-            Why Choose Us
+          <span className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Why MoChewy?
           </span>
           <h1 className="text-4xl font-bold text-stone-800 mb-4">
-            Our Commitment to Excellence
+            Soft. Sweet. Satisfying.
           </h1>
           <p className="text-stone-600 text-lg">
-            Discover why coffee businesses around the world trust Beaneca for
-            their premium Indonesian coffee needs.
+            Rasakan kenikmatan mochi lembut khas MoChewy—dibuat dari bahan
+            alami, dikemas dengan cinta, dan siap maniskan harimu.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="card bg-stone-50 border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-amber-700 text-white flex items-center gap-3">
-              <RiGlobalLine className="text-2xl" />
-              <h3 className="text-xl font-semibold">Global Reach</h3>
+          {/* Authentic Ingredients */}
+          <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div className="p-6 bg-rose-300 text-white flex items-center gap-3">
+              <PiLeafThin className="text-2xl" />
+              <h3 className="text-xl font-semibold">Bahan Alami</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/ac/6d/bd/ac6dbdcdef0e0d7cd4a265cf56235cae.jpg"
-              alt="Global Reach"
+              src="https://i.pinimg.com/736x/5e/8e/1e/5e8e1e8232a5d5a7f06d20f4efc69e6b.jpg"
+              alt="Natural Ingredients"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                Exporting to coffee professionals worldwide with trusted
-                delivery and streamlined logistics.
+                Menggunakan bahan-bahan berkualitas tanpa pengawet untuk rasa
+                mochi yang aman dan nikmat.
               </p>
             </div>
           </div>
 
-          <div className="card bg-stone-50 border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-amber-700 text-white flex items-center gap-3">
-              <FiCoffee className="text-2xl" />
-              <h3 className="text-xl font-semibold">Exceptional Quality</h3>
+          {/* Japanese-Inspired Recipe */}
+          <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div className="p-6 bg-rose-300 text-white flex items-center gap-3">
+              <GiJapan className="text-2xl" />
+              <h3 className="text-xl font-semibold">Resep Jepang Asli</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/d2/89/56/d2895699e51298362aa80130ad06f69c.jpg"
-              alt="Exceptional Quality"
+              src="https://i.pinimg.com/736x/b2/8a/38/b28a38550b9d3a3b2b179eab90538ac4.jpg"
+              alt="Japanese Recipe"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                Every bean is carefully hand-selected and roasted to highlight
-                the unique flavor of its origin.
+                Diinspirasi dari tradisi Jepang dengan sentuhan rasa khas
+                Indonesia.
               </p>
             </div>
           </div>
 
-          <div className="card bg-stone-50 border border-stone-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <div className="p-6 bg-amber-700 text-white flex items-center gap-3">
-              <LuLeaf className="text-2xl" />
-              <h3 className="text-xl font-semibold">Sustainable Practices</h3>
+          {/* Eco-Friendly Packaging */}
+          <div className="card bg-rose-50 border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div className="p-6 bg-rose-300 text-white flex items-center gap-3">
+              <TbBrandEco className="text-2xl" />
+              <h3 className="text-xl font-semibold">Ramah Lingkungan</h3>
             </div>
             <img
-              src="https://i.pinimg.com/736x/ce/7f/f7/ce7ff765d8ef4a090f7638f1061be258.jpg"
-              alt="Sustainable Practices"
+              src="https://i.pinimg.com/736x/87/26/6a/87266af9aef1e3cf7de3e14279a4d0f4.jpg"
+              alt="Eco Friendly"
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
               <p className="text-stone-600">
-                We partner with local farmers and cooperatives to promote
-                ethical, eco-friendly farming.
+                Kami menggunakan kemasan ramah lingkungan untuk mendukung bumi
+                yang lebih hijau.
               </p>
             </div>
           </div>
