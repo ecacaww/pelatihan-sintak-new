@@ -40,8 +40,8 @@ function Footer() {
     ],
     contact: {
       address: {
-        street: "Jl. Sriwijaya No. 123, Palembang",
-        city: "South Sumatra, Indonesia 30139",
+        street: "Jl. Sungai Sahang, Palembang",
+        city: "South Sumatra, Indonesia 30151",
       },
       email: "hello@mochewy.com",
       phone: "+62 812 3456 7890",
@@ -50,9 +50,9 @@ function Footer() {
 
   return (
     <>
-      {/* Main Footer */}
+
       <footer className="relative bg-gradient-to-br from-pink-100 via-pink-200 to-purple-200 text-purple-800 overflow-hidden">
-        {/* Decorative Background Elements */}
+
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-20 h-20 bg-amber-300 rounded-full blur-xl"></div>
           <div className="absolute bottom-20 right-20 w-32 h-32 bg-pink-300 rounded-full blur-2xl"></div>
@@ -61,7 +61,7 @@ function Footer() {
 
         <div className="relative z-10 container mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Brand Section */}
+
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-6 group">
                 <div className="p-3 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
@@ -73,7 +73,7 @@ function Footer() {
               </div>
               <p className="text-purple-700 font-medium mb-6 leading-relaxed">{footerData.brand.tagline}</p>
 
-              {/* Social Media */}
+ 
               <div className="flex gap-4">
                 {footerData.socialMedia.map((social, index) => {
                   const IconComponent = social.icon
@@ -91,7 +91,7 @@ function Footer() {
               </div>
             </div>
 
-            {/* Quick Links */}
+
             <div>
               <h6 className="text-lg font-bold text-purple-800 mb-6 relative">
                 Quick Links
@@ -110,7 +110,7 @@ function Footer() {
               </nav>
             </div>
 
-            {/* Mochi Products */}
+
             <div>
               <h6 className="text-lg font-bold text-purple-800 mb-6 relative">
                 Mochi Products
@@ -129,7 +129,7 @@ function Footer() {
               </nav>
             </div>
 
-            {/* Contact Info */}
+
             <div>
               <h6 className="text-lg font-bold text-purple-800 mb-6 relative">
                 Contact Us
@@ -175,19 +175,12 @@ function Footer() {
         </div>
       </footer>
 
-      {/* Copyright Footer */}
+
       <footer className="bg-gradient-to-r from-purple-800 to-pink-700 text-white py-6">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <p className="text-sm font-medium">© {new Date().getFullYear()} MoChewy. All rights reserved.</p>
-            <div className="flex gap-6 text-sm">
-              <a href="/privacy" className="hover:text-amber-300 transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="hover:text-amber-300 transition-colors duration-300">
-                Terms of Service
-              </a>
-            </div>
+
           </div>
         </div>
       </footer>
