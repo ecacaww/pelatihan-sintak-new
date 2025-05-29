@@ -90,19 +90,20 @@ function NavBar() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end gap-2">
-        <Link
-          to="/quote"
-          className="btn btn-ghost text-purple-800 hover:text-amber-300 border border-stone-700 hover:border-amber-400/50 hover:bg-stone-800/50"
+
+      <div className="dropdown dropdown-end">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-ghost btn-circle avatar"
         >
-          Request Quote
-        </Link>
-        <Link
-          to="/contact"
-          className="btn bg-[#DFF6FF] hover:bg-amber-700 border-amber-800 text-purple-800"
-        >
-          Contact Us
-        </Link>
+          <div className="w-10 rounded-full">
+            <img
+              alt="keranjang"
+              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
