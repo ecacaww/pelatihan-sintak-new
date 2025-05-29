@@ -51,11 +51,11 @@ function NavBar() {
         </div>
         <Link to="/" className="btn btn-ghost text-xl hover:bg-transparent">
           <FiCoffee className="text-[#333333] text-2xl" />
-          <span className="text-stone-100 ml-2 font-bold">MoChewy</span>
+          <span className="text-[#333333] ml-2 font-bold">MoChewy</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-2 text-[#333333]">
+        <ul className="menu menu-horizontal px-1 gap-2 text-[#333333] font-bold">
           <li>
             <Link
               to="/"
@@ -93,13 +93,13 @@ function NavBar() {
       <div className="navbar-end gap-2">
         <Link
           to="/quote"
-          className="btn btn-ghost text-stone-300 hover:text-amber-300 border border-stone-700 hover:border-amber-400/50 hover:bg-stone-800/50"
+          className="btn btn-ghost text-[#333333] hover:text-amber-300 border border-stone-700 hover:border-amber-400/50 hover:bg-stone-800/50"
         >
           Request Quote
         </Link>
         <Link
           to="/contact"
-          className="btn bg-amber-800 hover:bg-amber-700 border-amber-800 text-stone-100"
+          className="btn bg-[#DFF6FF] hover:bg-amber-700 border-amber-800 text-stone-100"
         >
           Contact Us
         </Link>
