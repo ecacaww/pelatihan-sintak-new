@@ -92,7 +92,7 @@ function NavBar() {
               to="/contact"
               className="font-medium hover:text-amber-300 hover:bg-stone-800/50 rounded-lg px-4 py-2 transition-colors"
             >
-              Contact USSSSSSSSSS
+              Contact
             </Link>
           </li>
         </ul>
