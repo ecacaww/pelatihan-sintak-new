@@ -50,7 +50,7 @@ function NavBar() {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl hover:bg-transparent">
-          <FiCoffee className="text-[#333333] text-2xl" />
+          <img src="logo-moci.png" className="text-[#333333] text-2xl" />
           <span className="text-[#333333] ml-2 font-bold">MoChewy</span>
         </Link>
       </div>
