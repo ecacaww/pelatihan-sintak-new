@@ -67,22 +67,25 @@ function Section2() {
             />
           </div>
           <div className="lg:w-1/2">
-            <span className="inline-block bg-[#FFD6D6] text-amber-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-[#FFD6D6] text-[#5A3E28] px-3 py-1 rounded-full text-sm font-medium mb-4">
               Our Best Signature
             </span>
-            <h1 className="text-4xl font-bold text-purple-800 mb-6 leading-tight">
+            <h1
+              className="text-4xl font-bold text-[#A78BFA] mb-6 leading-tight card bg-gradient-to-br from-[#FFEDF1] 
+                          to-[#FFEDF1]/70 border-l-4 border-[#FF85A2] shadow-md hover:shadow-lg transition-shadow"
+            >
               Deliciously Soft Mochi Snacks
               <br />
               Lovingly Made in Indonesia
             </h1>
-            <p className="text-pink-700 mb-8 text-lg leading-relaxed">
+            <p className="text-[#5A3E28] mb-8 text-lg leading-relaxed">
               MoChewy menghadirkan camilan mochi lembut dan kenyal dengan cita
               rasa khas Indonesia. Dibuat dari bahan-bahan berkualitas tinggi
               dan resep pilihan, setiap gigitan MoChewy memberikan pengalaman
               manis yang tak terlupakan. Kami berkomitmen pada kualitas, rasa
               otentik, dan kebahagiaan di setiap kemasan.
             </p>
-            <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white px-8 py-3 text-lg">
+            <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
               Learn About Our Process
             </button>
           </div>
