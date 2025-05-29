@@ -188,7 +188,7 @@ function Section4() {
           <div className="card bg-white border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
             <figure className="h-60 overflow-hidden">
               <img
-                src="https://i.pinimg.com/564x/e2/2a/92/e22a922eec2de95613ef366ed5a7a093.jpg"
+                src="/moci-st.jpg"
                 alt="Strawberry Mochi"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
@@ -214,7 +214,7 @@ function Section4() {
           <div className="card bg-white border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
             <figure className="h-60 overflow-hidden">
               <img
-                src="https://i.pinimg.com/564x/08/20/d4/0820d43b505b4d256c7e2a2a881ef812.jpg"
+                src="/moci-m.jpg"
                 alt="Matcha Mochi"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
@@ -240,7 +240,7 @@ function Section4() {
           <div className="card bg-white border border-rose-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl">
             <figure className="h-60 overflow-hidden">
               <img
-                src="https://i.pinimg.com/564x/f5/44/88/f54488f92880d0c4de2d0f93ec1c8f21.jpg"
+                src="/moci-c.jpg"
                 alt="Chocolate Mochi"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
