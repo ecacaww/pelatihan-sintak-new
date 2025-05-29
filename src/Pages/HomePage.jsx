@@ -26,7 +26,7 @@ function HeroSection() {
     <div
       className="hero h-[90vh] relative"
       style={{
-        backgroundImage: "\bg-mochi.jpg",
+        backgroundImage: "public\bg-mochi.jpg",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
