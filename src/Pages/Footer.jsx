@@ -78,14 +78,14 @@ function Footer() {
                 {footerData.socialMedia.map((social, index) => {
                   const IconComponent = social.icon
                   return (
-                    <a
+                    <Link
                       key={index}
                       href={social.url}
                       className="p-3 bg-white/50 backdrop-blur-sm rounded-xl hover:bg-white/80 hover:scale-110 transition-all duration-300 shadow-md hover:shadow-lg group"
                       aria-label={social.name}
                     >
                       <IconComponent className="text-lg text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
-                    </a>
+                    </Link>
                   )
                 })}
               </div>
@@ -99,13 +99,13 @@ function Footer() {
               </h6>
               <nav className="space-y-3">
                 {footerData.quickLinks.map((link, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={link.url}
                     className="block text-purple-700 hover:text-amber-500 hover:translate-x-2 transition-all duration-300 font-medium"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -118,13 +118,13 @@ function Footer() {
               </h6>
               <nav className="space-y-3">
                 {footerData.products.map((product, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={product.url}
                     className="block text-purple-700 hover:text-amber-500 hover:translate-x-2 transition-all duration-300 font-medium"
                   >
                     {product.name}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -137,14 +137,14 @@ function Footer() {
               </h6>
               <div className="space-y-4">
                 <div className="flex items-start gap-3 group">
-                <a
+                <Link
                     href="https://www.google.com/maps/place/Manajemen+informatika+D4+POLITEKNIK+NEGERI+SRIWIJAYA/@-3.004995,104.7560938,20167m/data=!3m1!1e3!4m10!1m2!2m1!1smanajemen+informatika+!3m6!1s0x2e3b75eb0503a7c3:0x28ea9ddd3efd54fd!8m2!3d-2.9795624!4d104.7311315!15sChVtYW5hamVtZW4gaW5mb3JtYXRpa2GSAQZzY2hvb2yqAVkQASoZIhVtYW5hamVtZW4gaW5mb3JtYXRpa2EoJjIfEAEiG1pPg5qMufg0Owz_WEMlczq1yLNMWCkFLf5q2TIZEAIiFW1hbmFqZW1lbiBpbmZvcm1hdGlrYeABAA!16s%2Fg%2F11c1nd_gqm?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-white/50 rounded-lg group-hover:bg-white/80 transition-all duration-300 hover:scale-110"
                   >
                     <FiMapPin className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
-                  </a>
+                  </Link>
                   <div>
                     <p className="text-purple-700 font-medium">{footerData.contact.address.street}</p>
                     <p className="text-purple-600 text-sm">{footerData.contact.address.city}</p>
@@ -155,26 +155,26 @@ function Footer() {
                   <div className="p-2 bg-white/50 rounded-lg group-hover:bg-white/80 transition-all duration-300">
                     <FiMail className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
-                  <a
+                  <Link
                     href="/contact"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
                   >
                     {footerData.contact.email}
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="flex items-center gap-3 group">
                   <div className="p-2 bg-white/50 rounded-lg group-hover:bg-white/80 transition-all duration-300">
                     <FiPhone className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
-                  <a
+                  <Link
                     href={`https://wa.me/${footerData.contact.phone.replace(/\s+/g, "").replace(/\+/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
                   >
                     {footerData.contact.phone} 
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
