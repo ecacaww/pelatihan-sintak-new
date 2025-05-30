@@ -7,6 +7,7 @@ import {
   FiFacebook,
   FiTwitter,
 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const footerData = {
@@ -18,17 +19,17 @@ function Footer() {
     socialMedia: [
       {
         name: "Instagram",
-        url: "/contact",
+        Link: "/contact",
         icon: FiInstagram,
       },
       {
         name: "Facebook",
-        url: "/contact",
+        Link: "/contact",
         icon: FiFacebook,
       },
       {
         name: "Twitter",
-        url: "/contact",
+        Link: "/contact",
         icon: FiTwitter,
       },
     ],
