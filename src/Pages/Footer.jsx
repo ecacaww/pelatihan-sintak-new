@@ -138,7 +138,7 @@ function Footer() {
               <div className="space-y-4">
                 <div className="flex items-start gap-3 group">
                 <Link
-                    href="https://www.google.com/maps/place/Manajemen+informatika+D4+POLITEKNIK+NEGERI+SRIWIJAYA/@-3.004995,104.7560938,20167m/data=!3m1!1e3!4m10!1m2!2m1!1smanajemen+informatika+!3m6!1s0x2e3b75eb0503a7c3:0x28ea9ddd3efd54fd!8m2!3d-2.9795624!4d104.7311315!15sChVtYW5hamVtZW4gaW5mb3JtYXRpa2GSAQZzY2hvb2yqAVkQASoZIhVtYW5hamVtZW4gaW5mb3JtYXRpa2EoJjIfEAEiG1pPg5qMufg0Owz_WEMlczq1yLNMWCkFLf5q2TIZEAIiFW1hbmFqZW1lbiBpbmZvcm1hdGlrYeABAA!16s%2Fg%2F11c1nd_gqm?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
+                    to="https://www.google.com/maps/place/Manajemen+informatika+D4+POLITEKNIK+NEGERI+SRIWIJAYA/@-3.004995,104.7560938,20167m/data=!3m1!1e3!4m10!1m2!2m1!1smanajemen+informatika+!3m6!1s0x2e3b75eb0503a7c3:0x28ea9ddd3efd54fd!8m2!3d-2.9795624!4d104.7311315!15sChVtYW5hamVtZW4gaW5mb3JtYXRpa2GSAQZzY2hvb2yqAVkQASoZIhVtYW5hamVtZW4gaW5mb3JtYXRpa2EoJjIfEAEiG1pPg5qMufg0Owz_WEMlczq1yLNMWCkFLf5q2TIZEAIiFW1hbmFqZW1lbiBpbmZvcm1hdGlrYeABAA!16s%2Fg%2F11c1nd_gqm?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-white/50 rounded-lg group-hover:bg-white/80 transition-all duration-300 hover:scale-110"
@@ -156,7 +156,7 @@ function Footer() {
                     <FiMail className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
                   <Link
-                    href="/contact"
+                    to="/contact"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
                   >
                     {footerData.contact.email}
@@ -168,7 +168,7 @@ function Footer() {
                     <FiPhone className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
                   <Link
-                    href={`https://wa.me/${footerData.contact.phone.replace(/\s+/g, "").replace(/\+/g, "")}`}
+                    to={`https://wa.me/${footerData.contact.phone.replace(/\s+/g, "").replace(/\+/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
