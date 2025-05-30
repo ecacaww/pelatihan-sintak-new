@@ -6,16 +6,6 @@ import { useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 function ProductPage() {
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash === "#section2") {
-      const section = document.querySelector(hash);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, []);
-
   return (
     <div className="bg-stone-50">
       <NavBar />
@@ -80,7 +70,7 @@ function Section2() {
             title="Matcha Delight"
             description="Mochi dengan aroma dan isian khas matcha Jepang
            yang lembut dan sedikit pahit. Cocok untuk Anda yang menyukai rasa autentik dan menenangkan dari matcha premium."
-           inStock={true}
+            inStock={true}
           />
           <ProductCard
             image="/moci-c.jpg"
@@ -101,7 +91,7 @@ function Section2() {
             title="Dango Mochi"
             description="Mochi tradisional bergaya Jepang dengan tampilan bulat bertingkat. Menghadirkan
              rasa kacang dan kayu yang kuat, cocok dinikmati sebagai camilan klasik yang hangat dan mengenyangkan."
-             inStock={true}
+            inStock={true}
           />
         </div>
       </div>
@@ -136,10 +126,16 @@ function ProductCard({ image, title, description, inStock = true }) {
       </figure>
 
       <div className="card-body p-6">
-        <h2 className="card-title text-2xl font-bold text-pink-800 mb-1">{title}</h2>
-        
+        <h2 className="card-title text-2xl font-bold text-pink-800 mb-1">
+          {title}
+        </h2>
+
         {/* Info stok */}
-        <p className={`text-sm mb-2 font-medium ${inStock ? "text-green-600" : "text-red-500"}`}>
+        <p
+          className={`text-sm mb-2 font-medium ${
+            inStock ? "text-green-600" : "text-red-500"
+          }`}
+        >
           {inStock ? "Tersedia" : "Stok Habis"}
         </p>
 
@@ -151,9 +147,7 @@ function ProductCard({ image, title, description, inStock = true }) {
           <button
             className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none disabled:opacity-50"
             disabled={!inStock}
-            onClick={() =>
-              window.open("https://wa.me/6281234567890", "_blank")
-            }
+            onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
           >
             {inStock ? "Pesan Sekarang" : "Stok Kosong"}
           </button>
