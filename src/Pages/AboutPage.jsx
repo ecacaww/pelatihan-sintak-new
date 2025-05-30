@@ -363,17 +363,17 @@ function CoreValuesSection() {
 function TestimonialsSection() {
   const testimonials = [
     {
-      quote:  "Mochi MoChewy adalah yang terbaik! Teksturnya benar-benar lembut dan kenyal dengan tingkat kekenyalan yang pas, tidak terlalu keras dan tidak terlalu lembek. Setiap gigitannya terasa memanjakan lidah, terutama dengan isian matcha red bean favorit saya yang autentik dan tidak terlalu manis. Rasanya sangat seimbang dan tidak bikin enek. Saya sudah berulang kali order dan kualitasnya selalu konsisten. Sangat jarang saya bisa menemukan mochi seenak ini di Indonesia!",
+      quote:  "Mochi MoChewy adalah yang terbaik! Teksturnya benar-benar lembut dan kenyal dengan tingkat kekenyalan yang pas, tidak terlalu keras dan tidak terlalu lembek.",
       author: "Salsabila Mifta",
       rating: 5,
     },
     {
-      quote:  "Saya sangat terkesan dengan pengalaman saya membeli dari MoChewy. Bukan hanya produknya yang enak, tapi juga pelayanannya luar biasa! Saya order lewat Instagram, adminnya cepat merespons dan sangat ramah menjawab semua pertanyaan saya. Proses pengirimannya pun cepat, dan yang paling menyenangkan adalah packagingnya yang super cute, rapi, dan aman sampai di tangan saya tanpa cacat. Teman-teman saya juga sampai penasaran karena tampilannya yang menggemaskan!",
+      quote:  "Saya sangat terkesan dengan pengalaman saya membeli dari MoChewy. Bukan hanya produknya yang enak, tapi juga pelayanannya luar biasa! Saya order lewat Instagram, adminnya cepat merespons dan sangat ramah menjawab semua pertanyaan saya.",
       author: "Malik Candra Kusuma",
       rating: 5,
     },
     {
-      quote: "Saya penggemar berat mochi, dan selama ini sudah mencoba berbagai macam merek lokal maupun impor. Tapi MoChewy benar-benar punya tempat tersendiri di hati saya. Dari segi rasa, teksturnya kenyal lembut dan tidak membosankan. Ukurannya pas, dan varian rasanya juga menarik serta tidak pasaran. Saya paling suka manggo. Selain itu, saya juga apresiasi karena MoChewy menjaga kualitas dengan sangat baik – setiap pesanan yang datang selalu fresh dan tidak pernah gagal memuaskan.",
+      quote: "Saya penggemar berat mochi, dan selama ini sudah mencoba berbagai macam merek lokal maupun impor. Tapi MoChewy benar-benar punya tempat tersendiri di hati saya. Dari segi rasa, teksturnya kenyal lembut dan tidak membosankan.",
       author: "Senorapati Agung",
       rating: 4,
     },
