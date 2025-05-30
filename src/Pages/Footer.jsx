@@ -39,12 +39,12 @@ function Footer() {
       { name: "Contact", url: "/contact" },
     ],
     products: [
-      { name: "Strawberry Mochi", url: "/product#section2" },
-      { name: "Mango Mochi", url: "/product#section2" },
-      { name: "Matcha Mochi", url: "/product#section2" },
-      { name: "Chocolate Mochi", url: "/product#section2" },
-      { name: "Character Mochi", url: "/product#section2" },
-      { name: "Dango", url: "/product#section2" },
+      { name: "Strawberry Mochi", url: "/product" },
+      { name: "Mango Mochi", url: "/product" },
+      { name: "Matcha Mochi", url: "/product" },
+      { name: "Chocolate Mochi", url: "/product" },
+      { name: "Character Mochi", url: "/product" },
+      { name: "Dango", url: "/product" },
     ],
     contact: {
       address: {

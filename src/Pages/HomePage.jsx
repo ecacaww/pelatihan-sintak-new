@@ -44,7 +44,7 @@ function HeroSection() {
           </h1>
           <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
             View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
-            <link rel="stylesheet" href="/product#section2" />
+            <link rel="stylesheet" href="/product" />
           </button>
         </div>
       </div>
