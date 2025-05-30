@@ -1,4 +1,5 @@
 import { FiCoffee, FiMail, FiPhone, FiMapPin, FiInstagram, FiFacebook, FiTwitter } from "react-icons/fi"
+import { Link } from "react-router-dom";
 
 function Footer() {
   const footerData = {
@@ -9,34 +10,33 @@ function Footer() {
     socialMedia: [
       {
         name: "Instagram",
-        url: "/contact",
+        url: <Link to="/contact">Instagram</Link>,
         icon: FiInstagram,
       },
       {
         name: "Facebook",
-        url: "/contact",
+        url: <Link to="/contact">Facebook</Link>,
         icon: FiFacebook,
       },
       {
         name: "Twitter",
-        url: "/contact",
+        url: <Link to="/contact">Twitter</Link>,
         icon: FiTwitter,
       },
     ],
     quickLinks: [
-      { name: "Home", url: "/" },
-      { name: "About Us", url: "/about" },
-      { name: "Mochi Products", url: "/product" },
-      { name: "Contact", url: "/contact" },
-
+      { name: <Link to="/">Home</Link> },
+      { name: <Link to="/about">About Us</Link> },
+      { name: <Link to="/product">Mochi Products</Link> },
+      { name: <Link to="/contact">Contact</Link> },
     ],
     products: [
-      { name: "Strawberry Mochi", url: "/product" },
-      { name: "Mango Mochi", url: "/product" },
-      { name: "Matcha Mochi", url: "/product" },
-      { name: "Chocolate Mochi", url: "/product" },
-      { name: "Character Mochi", url: "/product" },
-      { name: "Dango", url: "/product" },
+      { name: <Link to="/product">Strawberry Mochi</Link> },
+      { name: <Link to="/product">Mango Mochi</Link> },
+      { name: <Link to="/product">Matcha Mochi</Link> },
+      { name: <Link to="/product">Chocolate Mochi</Link> },
+      { name: <Link to="/product">Character Mochi</Link> },
+      { name: <Link to="/product">Dango</Link> },
     ],
     contact: {
       address: {
@@ -46,7 +46,7 @@ function Footer() {
       email: "hello@mochewy.com",
       phone: "+62 812 3456 7890",
     },
-  }
+  };
 
   return (
     <>
