@@ -92,12 +92,12 @@ function ContactHero() {
             >
               <FiPhone className="mr-2" /> Hubungi Kami
             </a>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="btn bg-transparent border-2 border-pink-300 text-pink-200 hover:bg-pink-300/20 hover:shadow-lg transition-all hover:-translate-y-1"
             >
               <FiMail className="mr-2" /> Email Kami
-            </a>
+            </Link>
           </div>
 
           {/* Stats */}
@@ -322,13 +322,12 @@ function ContactFormSection() {
                   <option disabled value="">
                     Pilih produk
                   </option>
-                  <option value="strawberry">Strawberry Mochi</option>
-                  <option value="mango">Mango Mochi</option>
-                  <option value="matcha">Matcha Mochi</option>
-                  <option value="chocolate">Chocolate Mochi</option>
-                  <option value="character">Character Mochi</option>
-                  <option value="dango">Dango</option>
-                  <option value="other">Lainnya</option>
+                  <option value="strawberry">SStrawberry Bliss</option>
+                  <option value="mango">Mango Tango</option>
+                  <option value="matcha">Matcha Delight</option>
+                  <option value="chocolate">Choco Lava</option>
+                  <option value="character">Mochi Character</option>
+                  <option value="dango">Dango Mochi</option>
                 </select>
               </div>
 
@@ -449,12 +448,12 @@ function ContactInfoSection() {
                 </div>
               </div>
               <div className="mt-4">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="btn btn-sm bg-[#E8E1F4] text-[#A78BFA] border-none hover:bg-[#A78BFA] hover:text-white transition-colors"
                 >
                   Kirim Email
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -487,24 +486,24 @@ function ContactInfoSection() {
                 >
                   <FaWhatsapp className="text-xl" />
                 </a>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-[#E8E1F4] text-[#A78BFA] rounded-full hover:bg-[#A78BFA] hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <FaInstagram className="text-xl" />
-                </a>
-                <a
-                  href="/contact"
+                </Link>
+                <Link
+                  to="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-[#FFEDF1] text-[#FF85A2] rounded-full hover:bg-[#FF85A2] hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin className="text-xl" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -587,12 +586,12 @@ function ContactFaqSection() {
 
       <div className="text-center mt-12">
         <p className="text-[#5A3E28] mb-4">Masih punya pertanyaan lain?</p>
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="btn bg-gradient-to-r from-[#A78BFA] to-[#8C6BFA] text-white border-none hover:shadow-lg transition-all hover:-translate-y-1"
         >
           <FiMail className="mr-2" /> Hubungi Tim Kami
-        </a>
+        </Link>
       </div>
     </section>
   );

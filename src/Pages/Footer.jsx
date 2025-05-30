@@ -31,12 +31,12 @@ function Footer() {
       { name: <Link to="/contact">Contact</Link> },
     ],
     products: [
-      { name: <Link to="/product">Strawberry Mochi</Link> },
-      { name: <Link to="/product">Mango Mochi</Link> },
-      { name: <Link to="/product">Matcha Mochi</Link> },
-      { name: <Link to="/product">Chocolate Mochi</Link> },
-      { name: <Link to="/product">Character Mochi</Link> },
-      { name: <Link to="/product">Dango</Link> },
+      { name: <Link to="/product">Strawberry Bliss</Link> },
+      { name: <Link to="/product">Mango Tango</Link> },
+      { name: <Link to="/product">Matcha Delight</Link> },
+      { name: <Link to="/product">Choco Lava</Link> },
+      { name: <Link to="/product">Mochi Character</Link> },
+      { name: <Link to="/product">Dango Mochi</Link> },
     ],
     contact: {
       address: {
