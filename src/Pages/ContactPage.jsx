@@ -1,11 +1,25 @@
-import NavBar from "./NavBar"
-import Footer from "./Footer"
-import { useState } from "react"
-import { db } from "../firebase"
-import { collection, addDoc } from "firebase/firestore"
-import { FiMail, FiPhone, FiMapPin, FiSend, FiMessageSquare, FiChevronUp, FiChevronDown } from "react-icons/fi"
-import { FaWhatsapp, FaInstagram, FaLinkedin, FaQuoteLeft } from "react-icons/fa"
-import { GiEarthAsiaOceania } from "react-icons/gi"
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import { useState } from "react";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
+import {
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiSend,
+  FiMessageSquare,
+  FiChevronUp,
+  FiChevronDown,
+} from "react-icons/fi";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaLinkedin,
+  FaQuoteLeft,
+} from "react-icons/fa";
+import { GiEarthAsiaOceania } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 function ContactPage() {
   return (
@@ -17,10 +31,10 @@ function ContactPage() {
       <ContactFaqSection />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default ContactPage
+export default ContactPage;
 
 function ContactHero() {
   const stats = [
@@ -42,20 +56,20 @@ function ContactHero() {
       value: "Nasional",
       desc: "Pengiriman ke seluruh Indonesia",
     },
-  ]
+  ];
 
   return (
     <div className="relative w-full ">
-        <div 
-      className="absolute inset-0 z-0 bg-stone-900/50"
-      style={{
-        backgroundImage: "url(/bg-mochi.jpg)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat"
-      }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/40 to-stone-900/20"></div>
+      <div
+        className="absolute inset-0 z-0 bg-stone-900/50"
+        style={{
+          backgroundImage: "url(/bg-mochi.jpg)",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/40 to-stone-900/20"></div>
       </div>
 
       <div className="relative z-10 min-h-[350px] sm:min-h-[400px] md:min-h-[550px] flex items-center justify-center px-4 py-12">
@@ -64,8 +78,8 @@ function ContactHero() {
             Hubungi <span className="text-pink-400">MoChewy</span>
           </h1>
           <p className="mb-4 sm:mb-8 text-sm sm:text-base md:text-xl font-medium text-pink-200 drop-shadow-sm">
-            Kami siap mendengarkan pertanyaan, saran, atau pesanan Anda. Hubungi kami untuk pengalaman mochi yang tak
-            terlupakan.
+            Kami siap mendengarkan pertanyaan, saran, atau pesanan Anda. Hubungi
+            kami untuk pengalaman mochi yang tak terlupakan.
           </p>
 
           {/* Contact Action Buttons */}
@@ -93,9 +107,15 @@ function ContactHero() {
                 key={index}
                 className="bg-white/20 backdrop-blur-md rounded-xl p-6 hover:bg-white/30 transition-all duration-300 hover:-translate-y-2 shadow-md"
               >
-                <div className="text-pink-400 mb-2 animate-bounce">{stat.icon}</div>
-                <div className="text-lg font-semibold text-white">{stat.title}</div>
-                <div className="text-3xl font-bold text-pink-300">{stat.value}</div>
+                <div className="text-pink-400 mb-2 animate-bounce">
+                  {stat.icon}
+                </div>
+                <div className="text-lg font-semibold text-white">
+                  {stat.title}
+                </div>
+                <div className="text-3xl font-bold text-pink-300">
+                  {stat.value}
+                </div>
                 <div className="text-sm text-pink-100 mt-1">{stat.desc}</div>
               </div>
             ))}
@@ -103,7 +123,7 @@ function ContactHero() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function ContactFormSection() {
@@ -112,37 +132,37 @@ function ContactFormSection() {
     email: "",
     message: "",
     product: "",
-  })
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
-  const [submitError, setSubmitError] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitSuccess(false)
-    setSubmitError(false)
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError(false);
 
     try {
-      await addDoc(collection(db, "contacts"), formData)
-      setSubmitSuccess(true)
-      setFormData({ name: "", email: "", message: "", product: "" })
+      await addDoc(collection(db, "contacts"), formData);
+      setSubmitSuccess(true);
+      setFormData({ name: "", email: "", message: "", product: "" });
     } catch (error) {
-      console.error("Error submitting form: ", error)
-      setSubmitError(true)
+      console.error("Error submitting form: ", error);
+      setSubmitError(true);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto">
@@ -155,8 +175,9 @@ function ContactFormSection() {
             <span className="absolute -bottom-2 left-0 w-32 h-2 bg-[#FF85A2]/50 z-0"></span>
           </h2>
           <p className="text-[#5A3E28] mb-8">
-            Lengkapi formulir di bawah ini dan tim kami akan menghubungi Anda dalam waktu 24 jam. Untuk pertanyaan
-            mendesak, silakan hubungi layanan pelanggan kami.
+            Lengkapi formulir di bawah ini dan tim kami akan menghubungi Anda
+            dalam waktu 24 jam. Untuk pertanyaan mendesak, silakan hubungi
+            layanan pelanggan kami.
           </p>
 
           <div className="space-y-6">
@@ -165,8 +186,12 @@ function ContactFormSection() {
                 <FiSend className="text-xl" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#6B4F3A]">Waktu Respons</h3>
-                <p className="text-[#5A3E28]">Biasanya membalas dalam 2 hari kerja</p>
+                <h3 className="text-lg font-semibold text-[#6B4F3A]">
+                  Waktu Respons
+                </h3>
+                <p className="text-[#5A3E28]">
+                  Biasanya membalas dalam 2 hari kerja
+                </p>
               </div>
             </div>
 
@@ -175,8 +200,12 @@ function ContactFormSection() {
                 <FiPhone className="text-xl" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#6B4F3A]">Pertanyaan Mendesak</h3>
-                <p className="text-[#5A3E28]">Hubungi +62 812 3456 7890 (24/7)</p>
+                <h3 className="text-lg font-semibold text-[#6B4F3A]">
+                  Pertanyaan Mendesak
+                </h3>
+                <p className="text-[#5A3E28]">
+                  Hubungi +62 812 3456 7890 (24/7)
+                </p>
               </div>
             </div>
 
@@ -185,11 +214,13 @@ function ContactFormSection() {
                 <div className="flex items-start gap-3">
                   <FaQuoteLeft className="text-[#FF85A2] text-xl flex-shrink-0 mt-1" />
                   <p className="text-[#5A3E28] italic">
-                    "MoChewy selalu memberikan pelayanan terbaik. Respons cepat dan ramah membuat saya selalu puas
-                    berbelanja di sini!"
+                    "MoChewy selalu memberikan pelayanan terbaik. Respons cepat
+                    dan ramah membuat saya selalu puas berbelanja di sini!"
                   </p>
                 </div>
-                <p className="text-right text-[#6B4F3A] font-medium mt-2">- Pelanggan Setia</p>
+                <p className="text-right text-[#6B4F3A] font-medium mt-2">
+                  - Pelanggan Setia
+                </p>
               </div>
             </div>
           </div>
@@ -239,7 +270,10 @@ function ContactFormSection() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-[#6B4F3A] font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-[#6B4F3A] font-medium mb-2"
+                >
                   Nama Lengkap
                 </label>
                 <input
@@ -254,7 +288,10 @@ function ContactFormSection() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-[#6B4F3A] font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-[#6B4F3A] font-medium mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -269,7 +306,10 @@ function ContactFormSection() {
               </div>
 
               <div>
-                <label htmlFor="product" className="block text-[#6B4F3A] font-medium mb-2">
+                <label
+                  htmlFor="product"
+                  className="block text-[#6B4F3A] font-medium mb-2"
+                >
                   Produk yang Diminati
                 </label>
                 <select
@@ -293,7 +333,10 @@ function ContactFormSection() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-[#6B4F3A] font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-[#6B4F3A] font-medium mb-2"
+                >
                   Pesan
                 </label>
                 <textarea
@@ -329,7 +372,7 @@ function ContactFormSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function ContactInfoSection() {
@@ -343,7 +386,9 @@ function ContactInfoSection() {
             </span>
             <span className="absolute -bottom-2 left-0 right-0 w-full h-2 bg-[#FF85A2]/50 z-0"></span>
           </h2>
-          <p className="text-[#5A3E28] max-w-2xl mx-auto">Hubungi kami melalui salah satu saluran berikut</p>
+          <p className="text-[#5A3E28] max-w-2xl mx-auto">
+            Hubungi kami melalui salah satu saluran berikut
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -352,9 +397,11 @@ function ContactInfoSection() {
               <div className="p-4 bg-gradient-to-br from-[#FF85A2] to-[#FF6B8B] rounded-full mb-6 text-white shadow-lg group-hover:rotate-[360deg] transition-transform duration-500">
                 <FiMapPin className="text-2xl" />
               </div>
-              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">Toko Kami</h3>
+              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">
+                Toko Kami
+              </h3>
               <address className="not-italic text-[#5A3E28]">
-               Jl. Sungai Sahang, Palembang  
+                Jl. Sungai Sahang, Palembang
                 <br />
                 Palembang, South Sumatra
                 <br />
@@ -378,25 +425,27 @@ function ContactInfoSection() {
               <div className="p-4 bg-gradient-to-br from-[#A78BFA] to-[#8C6BFA] rounded-full mb-6 text-white shadow-lg group-hover:rotate-[360deg] transition-transform duration-500">
                 <FiMail className="text-2xl" />
               </div>
-              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">Email Kami</h3>
+              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">
+                Email Kami
+              </h3>
               <div className="space-y-3">
                 <div>
                   <p className="text-[#5A3E28] mb-1">Informasi Umum:</p>
-                  <a
-                    href="mailto:hello@mochewy.com"
+                  <Link
+                    to="/contact"
                     className="text-[#A78BFA] hover:text-[#8C6BFA] font-medium transition-colors"
                   >
                     hello@mochewy.com
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <p className="text-[#5A3E28] mb-1">Pemesanan:</p>
-                  <a
-                    href="mailto:order@mochewy.com"
+                  <Link
+                    to="/contact"
                     className="text-[#A78BFA] hover:text-[#8C6BFA] font-medium transition-colors"
                   >
                     order@mochewy.com
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mt-4">
@@ -415,7 +464,9 @@ function ContactInfoSection() {
               <div className="p-4 bg-gradient-to-br from-[#FF85A2] to-[#A78BFA] rounded-full mb-6 text-white shadow-lg group-hover:rotate-[360deg] transition-transform duration-500">
                 <FiPhone className="text-2xl" />
               </div>
-              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">Hubungi Kami</h3>
+              <h3 className="card-title text-[#6B4F3A] mb-3 text-xl">
+                Hubungi Kami
+              </h3>
               <p className="text-[#5A3E28] mb-2">
                 <a
                   href="tel:+6281234567890"
@@ -460,11 +511,11 @@ function ContactInfoSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function ContactFaqSection() {
-  const [activeIndex, setActiveIndex] = useState(null)
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const faqs = [
     {
@@ -487,7 +538,7 @@ function ContactFaqSection() {
       answer:
         "Anda dapat melakukan pemesanan melalui website kami, Instagram, WhatsApp, atau datang langsung ke outlet kami. Untuk pemesanan online, silakan isi formulir pemesanan dan lakukan pembayaran. Setelah pembayaran dikonfirmasi, pesanan Anda akan diproses dan dikirim sesuai jadwal yang telah disepakati.",
     },
-  ]
+  ];
 
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto">
@@ -498,22 +549,36 @@ function ContactFaqSection() {
           </span>
           <span className="absolute -bottom-2 left-0 right-0 w-full h-2 bg-[#FF85A2]/50 z-0"></span>
         </h2>
-        <p className="text-[#5A3E28] max-w-2xl mx-auto">Temukan jawaban untuk pertanyaan yang sering diajukan</p>
+        <p className="text-[#5A3E28] max-w-2xl mx-auto">
+          Temukan jawaban untuk pertanyaan yang sering diajukan
+        </p>
       </div>
 
       <div className="space-y-4 max-w-3xl mx-auto">
         {faqs.map((faq, index) => (
-          <div key={index} className="card bg-white shadow-md hover:shadow-lg transition-all">
-            <div className="card-body p-6" onClick={() => setActiveIndex(activeIndex === index ? null : index)}>
+          <div
+            key={index}
+            className="card bg-white shadow-md hover:shadow-lg transition-all"
+          >
+            <div
+              className="card-body p-6"
+              onClick={() =>
+                setActiveIndex(activeIndex === index ? null : index)
+              }
+            >
               <div className="flex justify-between items-center cursor-pointer">
-                <h3 className="text-lg font-semibold text-[#6B4F3A]">{faq.question}</h3>
+                <h3 className="text-lg font-semibold text-[#6B4F3A]">
+                  {faq.question}
+                </h3>
                 <button className="p-2 bg-[#F3EFFA] rounded-full text-[#A78BFA]">
                   {activeIndex === index ? <FiChevronUp /> : <FiChevronDown />}
                 </button>
               </div>
 
               {activeIndex === index && (
-                <div className="mt-4 text-[#5A3E28] border-t border-[#E8E1F4] pt-4">{faq.answer}</div>
+                <div className="mt-4 text-[#5A3E28] border-t border-[#E8E1F4] pt-4">
+                  {faq.answer}
+                </div>
               )}
             </div>
           </div>
@@ -530,5 +595,5 @@ function ContactFaqSection() {
         </a>
       </div>
     </section>
-  )
+  );
 }
