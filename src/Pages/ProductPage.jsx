@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { useState } from "react";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 function ProductPage() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash;
+      if (hash) {
+        const section = document.querySelector(hash);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  }, []);
+
   return (
     <div className="bg-stone-50">
       <NavBar />
@@ -54,44 +64,38 @@ function Section2() {
           <ProductCard
             image="/productcard1.jpeg"
             title="Strawberry Bliss"
-            description="Mochi lembut berwarna merah muda dengan selai stroberi asli yang segar, cocok untuk pencinta rasa buah.
+            description="Mochi lembut berwarna merah muda dengan isian krim manis dan potongan stroberi segar. 
             Rasa manis dan asamnya berpadu sempurna, menciptakan pengalaman menyegarkan yang cocok dinikmati kapan saja."
-            inStock={true}
           />
           <ProductCard
             image="/productcard2.jpeg"
             title="Mango Tango"
             description="Kenikmatan tropis dalam setiap gigitan. Mochi mangga ini diisi 
             dengan krim mangga halus dan dihiasi potongan buah asli, memberikan rasa manis alami yang ringan dan memikat."
-            inStock={true}
           />
           <ProductCard
             image="/productcard3.jpeg"
-            title="Matcha Delight"
-            description="Mochi dengan aroma dan isian khas matcha Jepang
+            title="Matcha Deligh"
+            description="Mochi dengan aroma khas matcha Jepang, berisi krim teh hijau 
            yang lembut dan sedikit pahit. Cocok untuk Anda yang menyukai rasa autentik dan menenangkan dari matcha premium."
-            inStock={true}
           />
           <ProductCard
             image="/moci-c.jpg"
             title="Choco Lava"
             description="Kelezatan cokelat pekat dibungkus dalam mochi kenyal. Isian krim cokelat
             yang kaya rasa, berpadu dengan tekstur halus dan aroma cokelat yang menggoda setiap kali dinikmati."
-            inStock={true}
           />
           <ProductCard
             image="/productcard5.jpeg"
             title="Mochi Character"
             description="Mochi dengan bentuk karakter lucu dan warna-warni ceria, dibuat dengan detail yang menggemaskan. 
             Tidak hanya enak, tapi juga menyenangkan untuk dilihat — pilihan sempurna untuk anak-anak, hampers ulang tahun, atau hadiah spesial bagi orang tersayang."
-            inStock={true}
           />
           <ProductCard
             image="/productcard6.jpeg"
             title="Dango Mochi"
             description="Mochi tradisional bergaya Jepang dengan tampilan bulat bertingkat. Menghadirkan
              rasa kacang dan kayu yang kuat, cocok dinikmati sebagai camilan klasik yang hangat dan mengenyangkan."
-            inStock={true}
           />
         </div>
       </div>
@@ -99,57 +103,29 @@ function Section2() {
   );
 }
 
-function ProductCard({ image, title, description, inStock = true }) {
-  const [isFavorited, setIsFavorited] = useState(false);
-
-  const toggleFavorite = () => {
-    setIsFavorited(!isFavorited);
-  };
-
+function ProductCard(props) {
   return (
-    <div className="relative flex card bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
-      {/* Tombol Favorit */}
-      <button
-        onClick={toggleFavorite}
-        className="absolute top-4 right-4 z-20 text-pink-500 hover:text-pink-600"
-        aria-label="Favorite"
-      >
-        {isFavorited ? <FaHeart size={24} /> : <FaRegHeart size={24} />}
-      </button>
-
+    <div className=" flex card bg-white shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
       <figure className="relative h-64 overflow-hidden">
         <img
-          src={image}
-          alt={title}
+          src={props.image}
+          alt={props.title}
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </figure>
-
       <div className="card-body p-6">
         <h2 className="card-title text-2xl font-bold text-pink-800 mb-1">
-          {title}
+          {props.title}
         </h2>
 
-        {/* Info stok */}
-        <p
-          className={`text-sm mb-2 font-medium ${
-            inStock ? "text-green-600" : "text-red-500"
-          }`}
-        >
-          {inStock ? "Tersedia" : "Stok Habis"}
-        </p>
-
         <div className="mb-4">
-          <p className="text-stone-600 leading-relaxed">{description}</p>
+          <p className="text-stone-600 leading-relaxed">{props.description}</p>
         </div>
 
         <div className="card-actions">
-          <button
-            className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none disabled:opacity-50"
-            disabled={!inStock}
-            onClick={() => window.open("https://wa.me/6281234567890", "_blank")}
-          >
-            {inStock ? "Pesan Sekarang" : "Stok Kosong"}
+          <button className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none">
+            Pesan Sekarang
+            <link rel="stylesheet" href="https://wa.me/6281234567890" />
           </button>
         </div>
       </div>
