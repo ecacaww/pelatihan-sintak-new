@@ -5,6 +5,7 @@ import { RiEmotionHappyLine } from "react-icons/ri";
 import { PiLeafBold } from "react-icons/pi";
 import { TbTruckDelivery } from "react-icons/tb";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -22,6 +23,12 @@ function HomePage() {
 export default HomePage;
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleCatalogClick = () => {
+    navigate("/product#section2");
+  };
+
   return (
     <div
       className="hero h-[90vh] relative"
@@ -42,9 +49,11 @@ function HeroSection() {
             <br />
             <span className="text-pink-400">The Mochi Experience</span>
           </h1>
-          <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
+          <button
+            onClick={handleCatalogClick}
+            className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all"
+          >
             View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
-            <link rel="stylesheet" href="/product" />
           </button>
         </div>
       </div>

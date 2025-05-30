@@ -4,6 +4,16 @@ import Footer from "./Footer";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 function ProductPage() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === "#section2") {
+      const section = document.querySelector(hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
+
   return (
     <div className="bg-stone-50">
       <NavBar />
