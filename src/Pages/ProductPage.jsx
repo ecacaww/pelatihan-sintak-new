@@ -1,21 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 function ProductPage() {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hash = window.location.hash;
-      if (hash) {
-        const section = document.querySelector(hash);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    }
-  }, []);
-
   return (
     <div className="bg-stone-50">
       <NavBar />
@@ -59,6 +47,8 @@ function HeroSection() {
 function Section2() {
   return (
     <section id="section2" className="py-16 bg-stone-50">
+      {" "}
+      {/* ID section2 sudah ada */}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProductCard
@@ -75,7 +65,7 @@ function Section2() {
           />
           <ProductCard
             image="/productcard3.jpeg"
-            title="Matcha Deligh"
+            title="Matcha Delight"
             description="Mochi dengan aroma khas matcha Jepang, berisi krim teh hijau 
            yang lembut dan sedikit pahit. Cocok untuk Anda yang menyukai rasa autentik dan menenangkan dari matcha premium."
           />

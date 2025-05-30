@@ -1,22 +1,13 @@
 import React from "react";
+import { useHistory } from "react-router-dom"; // Import useHistory
 import NavBar from "./NavBar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { RiEmotionHappyLine } from "react-icons/ri";
 import { PiLeafBold } from "react-icons/pi";
 import { TbTruckDelivery } from "react-icons/tb";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-  useEffect(() => {
-    if (window.location.hash) {
-      const element = document.getElementById(
-        window.location.hash.replace("#", "")
-      );
-      if (element) element.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
-
   return (
     <div className="bg-stone-50">
       <NavBar />
@@ -32,10 +23,11 @@ function HomePage() {
 export default HomePage;
 
 function HeroSection() {
-  const navigate = useNavigate();
+  const history = useHistory(); // Inisialisasi useHistory
 
-  const handleCatalogClick = () => {
-    navigate("/product#section2");
+  // Fungsi untuk menangani klik tombol
+  const handleViewCatalog = () => {
+    history.push("/product#section2"); // Navigasi ke ProductPage dan Section2
   };
 
   return (
@@ -59,8 +51,8 @@ function HeroSection() {
             <span className="text-pink-400">The Mochi Experience</span>
           </h1>
           <button
-            onClick={handleCatalogClick}
-            className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all"
+            className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-"
+            onClick={handleViewCatalog} // Tambahkan onClick
           >
             View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
           </button>
@@ -222,12 +214,7 @@ function Section4() {
                 Mochi lembut berisi selai stroberi asli yang segar, cocok untuk
                 pencinta rasa buah.
               </p>
-              <button
-                onClick={() =>
-                  window.open("https://wa.me/6281234567890", "_blank")
-                }
-                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
-              >
+              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
                 Pesan Sekarang
               </button>
             </div>
@@ -253,12 +240,7 @@ function Section4() {
                 Kombinasi lembut antara mochi dan isian matcha Jepang asli untuk
                 rasa yang khas dan memanjakan.
               </p>
-              <button
-                onClick={() =>
-                  window.open("https://wa.me/6281234567890", "_blank")
-                }
-                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
-              >
+              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
                 Pesan Sekarang
               </button>
             </div>
@@ -284,12 +266,7 @@ function Section4() {
                 Isi cokelat yang meleleh saat digigit, bikin camilan ini cocok
                 untuk pecinta manis sejati.
               </p>
-              <button
-                onClick={() =>
-                  window.open("https://wa.me/6281234567890", "_blank")
-                }
-                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
-              >
+              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
                 Pesan Sekarang
               </button>
             </div>
