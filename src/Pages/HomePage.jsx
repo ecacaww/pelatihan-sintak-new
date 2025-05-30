@@ -8,6 +8,15 @@ import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  useEffect(() => {
+    if (window.location.hash) {
+      const element = document.getElementById(
+        window.location.hash.replace("#", "")
+      );
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <div className="bg-stone-50">
       <NavBar />
