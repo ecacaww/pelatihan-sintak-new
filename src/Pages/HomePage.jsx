@@ -213,7 +213,12 @@ function Section4() {
                 Mochi lembut berisi selai stroberi asli yang segar, cocok untuk
                 pencinta rasa buah.
               </p>
-              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+              <button
+                onClick={() =>
+                  window.open("https://wa.me/6281234567890", "_blank")
+                }
+                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
+              >
                 Pesan Sekarang
               </button>
             </div>
@@ -239,7 +244,12 @@ function Section4() {
                 Kombinasi lembut antara mochi dan isian matcha Jepang asli untuk
                 rasa yang khas dan memanjakan.
               </p>
-              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+              <button
+                onClick={() =>
+                  window.open("https://wa.me/6281234567890", "_blank")
+                }
+                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
+              >
                 Pesan Sekarang
               </button>
             </div>
@@ -265,7 +275,12 @@ function Section4() {
                 Isi cokelat yang meleleh saat digigit, bikin camilan ini cocok
                 untuk pecinta manis sejati.
               </p>
-              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+              <button
+                onClick={() =>
+                  window.open("https://wa.me/6281234567890", "_blank")
+                }
+                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
+              >
                 Pesan Sekarang
               </button>
             </div>
