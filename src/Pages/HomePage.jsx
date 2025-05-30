@@ -54,7 +54,7 @@ function HeroSection() {
             className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-"
             onClick={handleViewCatalog} // Tambahkan onClick
           >
-            View Mochi Cataloggg <IoIosArrowRoundForward className="text-xl" />
+            View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
           </button>
         </div>
       </div>
