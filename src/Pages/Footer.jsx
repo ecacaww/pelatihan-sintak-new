@@ -1,25 +1,34 @@
-import { FiCoffee, FiMail, FiPhone, FiMapPin, FiInstagram, FiFacebook, FiTwitter } from "react-icons/fi"
+import {
+  FiCoffee,
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiInstagram,
+  FiFacebook,
+  FiTwitter,
+} from "react-icons/fi";
 
 function Footer() {
   const footerData = {
     brand: {
       name: "MoChewy",
-      tagline: "Soft, Sweet, and Irresistible - The Ultimate Mochi Experience that melts in your mouth!",
+      tagline:
+        "Soft, Sweet, and Irresistible - The Ultimate Mochi Experience that melts in your mouth!",
     },
     socialMedia: [
       {
         name: "Instagram",
-        url: "https://instagram.com/mochewy",
+        url: "/contact",
         icon: FiInstagram,
       },
       {
         name: "Facebook",
-        url: "https://facebook.com/mochewy",
+        url: "/contact",
         icon: FiFacebook,
       },
       {
         name: "Twitter",
-        url: "https://twitter.com/mochewy",
+        url: "/contact",
         icon: FiTwitter,
       },
     ],
@@ -28,7 +37,6 @@ function Footer() {
       { name: "About Us", url: "/about" },
       { name: "Mochi Products", url: "/product" },
       { name: "Contact", url: "/contact" },
-
     ],
     products: [
       { name: "Strawberry Mochi", url: "/product" },
@@ -46,13 +54,11 @@ function Footer() {
       email: "hello@mochewy.com",
       phone: "+62 812 3456 7890",
     },
-  }
+  };
 
   return (
     <>
-
       <footer className="relative bg-gradient-to-br from-pink-100 via-pink-200 to-purple-200 text-purple-800 overflow-hidden">
-
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-20 h-20 bg-amber-300 rounded-full blur-xl"></div>
           <div className="absolute bottom-20 right-20 w-32 h-32 bg-pink-300 rounded-full blur-2xl"></div>
@@ -61,7 +67,6 @@ function Footer() {
 
         <div className="relative z-10 container mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-6 group">
                 <div className="p-3 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
@@ -71,12 +76,13 @@ function Footer() {
                   MoChewy
                 </h1>
               </div>
-              <p className="text-purple-700 font-medium mb-6 leading-relaxed">{footerData.brand.tagline}</p>
+              <p className="text-purple-700 font-medium mb-6 leading-relaxed">
+                {footerData.brand.tagline}
+              </p>
 
- 
               <div className="flex gap-4">
                 {footerData.socialMedia.map((social, index) => {
-                  const IconComponent = social.icon
+                  const IconComponent = social.icon;
                   return (
                     <a
                       key={index}
@@ -86,11 +92,10 @@ function Footer() {
                     >
                       <IconComponent className="text-lg text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                     </a>
-                  )
+                  );
                 })}
               </div>
             </div>
-
 
             <div>
               <h6 className="text-lg font-bold text-purple-800 mb-6 relative">
@@ -110,7 +115,6 @@ function Footer() {
               </nav>
             </div>
 
-
             <div>
               <h6 className="text-lg font-bold text-purple-800 mb-6 relative">
                 Mochi Products
@@ -129,7 +133,6 @@ function Footer() {
               </nav>
             </div>
 
-
             <div>
               <h6 className="text-lg font-bold text-purple-800 mb-6 relative">
                 Contact Us
@@ -137,7 +140,7 @@ function Footer() {
               </h6>
               <div className="space-y-4">
                 <div className="flex items-start gap-3 group">
-                <a
+                  <a
                     href="https://www.google.com/maps/place/Manajemen+informatika+D4+POLITEKNIK+NEGERI+SRIWIJAYA/@-3.004995,104.7560938,20167m/data=!3m1!1e3!4m10!1m2!2m1!1smanajemen+informatika+!3m6!1s0x2e3b75eb0503a7c3:0x28ea9ddd3efd54fd!8m2!3d-2.9795624!4d104.7311315!15sChVtYW5hamVtZW4gaW5mb3JtYXRpa2GSAQZzY2hvb2yqAVkQASoZIhVtYW5hamVtZW4gaW5mb3JtYXRpa2EoJjIfEAEiG1pPg5qMufg0Owz_WEMlczq1yLNMWCkFLf5q2TIZEAIiFW1hbmFqZW1lbiBpbmZvcm1hdGlrYeABAA!16s%2Fg%2F11c1nd_gqm?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -146,8 +149,12 @@ function Footer() {
                     <FiMapPin className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </a>
                   <div>
-                    <p className="text-purple-700 font-medium">{footerData.contact.address.street}</p>
-                    <p className="text-purple-600 text-sm">{footerData.contact.address.city}</p>
+                    <p className="text-purple-700 font-medium">
+                      {footerData.contact.address.street}
+                    </p>
+                    <p className="text-purple-600 text-sm">
+                      {footerData.contact.address.city}
+                    </p>
                   </div>
                 </div>
 
@@ -156,7 +163,7 @@ function Footer() {
                     <FiMail className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
                   <a
-                    
+                    href="/contact"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
                   >
                     {footerData.contact.email}
@@ -168,7 +175,11 @@ function Footer() {
                     <FiPhone className="text-purple-700 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
                   <a
-                    
+                    href={`https://wa.me/${footerData.contact.phone
+                      .replace(/\s+/g, "")
+                      .replace(/\+/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-purple-700 font-medium hover:text-amber-500 transition-colors duration-300"
                   >
                     {footerData.contact.phone}
@@ -180,17 +191,17 @@ function Footer() {
         </div>
       </footer>
 
-
       <footer className="bg-gradient-to-r from-purple-800 to-pink-700 text-white py-6">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <p className="text-sm font-medium">© {new Date().getFullYear()} MoChewy. All rights reserved.</p>
-
+            <p className="text-sm font-medium">
+              © {new Date().getFullYear()} MoChewy. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

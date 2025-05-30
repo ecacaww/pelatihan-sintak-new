@@ -1,9 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { RiGlobalLine } from "react-icons/ri";
-import { FiCoffee } from "react-icons/fi";
-import { LuLeaf } from "react-icons/lu";
 import { RiEmotionHappyLine } from "react-icons/ri";
 import { PiLeafBold } from "react-icons/pi";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -40,13 +37,14 @@ function HeroSection() {
           <h2 className="mb-4 text-2xl font-semibold text-amber-100 tracking-wider">
             MoChewy
           </h2>
-          <h1 className="mb-8 text-5xl font-bold text-white leading-tight">
+          <h1 className="mb-8 text-5xl font-bold text-pink-300 leading-tight">
             Soft, Sweet, and Irresistible
             <br />
-            The Mochi Experience
+            <span className="text-pink-400">The Mochi Experience</span>
           </h1>
-          <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white px-8 py-3 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+          <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
             View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
+            <link rel="stylesheet" href="/product" />
           </button>
         </div>
       </div>
@@ -67,22 +65,24 @@ function Section2() {
             />
           </div>
           <div className="lg:w-1/2">
-            <span className="inline-block bg-[#FFD6D6] text-amber-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-[#FFD6D6] text-[#5A3E28] px-3 py-1 rounded-full text-sm font-medium mb-4">
               Our Best Signature
             </span>
-            <h1 className="text-4xl font-bold text-purple-800 mb-6 leading-tight">
-              Deliciously Soft Mochi Snacks
-              <br />
-              Lovingly Made in Indonesia
-            </h1>
-            <p className="text-pink-700 mb-8 text-lg leading-relaxed">
-              MoChewy menghadirkan camilan mochi lembut dan kenyal dengan cita
-              rasa khas Indonesia. Dibuat dari bahan-bahan berkualitas tinggi
-              dan resep pilihan, setiap gigitan MoChewy memberikan pengalaman
-              manis yang tak terlupakan. Kami berkomitmen pada kualitas, rasa
-              otentik, dan kebahagiaan di setiap kemasan.
-            </p>
-            <button className="btn bg-amber-700 hover:bg-amber-600 border-amber-700 text-white px-8 py-3 text-lg">
+            <div className="card bg-gradient-to-br from-[#FFEDF1] to-[#FFEDF1]/70 border-l-4 border-[#FF85A2] shadow-md hover:shadow-lg transition-shadow mb-3">
+              <h1 className="text-4xl font-bold text-[#A78BFA] ml-2 mb-6 leading-tight ">
+                Deliciously Soft Mochi Snacks
+                <br />
+                Lovingly Made in Indonesia
+              </h1>
+              <p className="text-[#5A3E28] mb-8 ml-2 text-lg leading-relaxed">
+                MoChewy menghadirkan camilan mochi lembut dan kenyal dengan cita
+                rasa khas Indonesia. Dibuat dari bahan-bahan berkualitas tinggi
+                dan resep pilihan, setiap gigitan MoChewy memberikan pengalaman
+                manis yang tak terlupakan. Kami berkomitmen pada kualitas, rasa
+                otentik, dan kebahagiaan di setiap kemasan.
+              </p>
+            </div>
+            <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
               Learn About Our Process
             </button>
           </div>
@@ -100,10 +100,10 @@ function Section3() {
           <span className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
             Kenapa MoChewy?
           </span>
-          <h1 className="text-4xl font-bold text-stone-800 mb-4">
+          <h1 className="text-4xl font-bold text-[#A78BFA] mb-4">
             Komitmen Kami untuk Kelezatan dan Kebahagiaan
           </h1>
-          <p className="text-stone-600 text-lg">
+          <p className="text-[#6B4F3A] text-lg">
             MoChewy bukan sekadar camilan — kami hadir untuk memberikan
             pengalaman manis, lembut, dan menyenangkan dalam setiap gigitan.
           </p>
@@ -116,7 +116,7 @@ function Section3() {
               <h3 className="text-xl font-semibold">Rasa yang Bikin Bahagia</h3>
             </div>
             <img
-              src="https://i.pinimg.com/564x/ae/17/53/ae17536bdce2c6bd3449ef594210016b.jpg"
+              src="https://cdn1-production-images-kly.akamaized.net/vR_4OOBO8Dll-Aa9_xG_q8yr7xQ=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5024413/original/038198800_1732615844-cara-membuat-mochi-bites.jpg"
               alt="Happy Taste"
               className="w-full h-48 object-cover"
             />
@@ -134,7 +134,7 @@ function Section3() {
               <h3 className="text-xl font-semibold">Bahan Berkualitas</h3>
             </div>
             <img
-              src="https://i.pinimg.com/564x/d7/31/8d/d7318d070ae13c60153a563b2d0fe3cb.jpg"
+              src="https://image.popmama.com/post/20220519/mochi-jpg-65139eddcc0f8e740d3deb5d0edac6e7.jpg?tr=w-1920,f-webp,q-75&width=1920&format=webp&quality=75"
               alt="Premium Ingredients"
               className="w-full h-48 object-cover"
             />
@@ -152,7 +152,7 @@ function Section3() {
               <h3 className="text-xl font-semibold">Pengiriman Cepat</h3>
             </div>
             <img
-              src="https://i.pinimg.com/564x/12/90/0f/12900f46ae0d6ae352cf5d3f30a83e00.jpg"
+              src="/moci-delivery.jpg"
               alt="Fast Delivery"
               className="w-full h-48 object-cover"
             />
@@ -204,7 +204,12 @@ function Section4() {
                 Mochi lembut berisi selai stroberi asli yang segar, cocok untuk
                 pencinta rasa buah.
               </p>
-              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+              <button
+                onClick={() =>
+                  window.open("https://wa.me/6281234567890", "_blank")
+                }
+                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
+              >
                 Pesan Sekarang
               </button>
             </div>
@@ -230,7 +235,12 @@ function Section4() {
                 Kombinasi lembut antara mochi dan isian matcha Jepang asli untuk
                 rasa yang khas dan memanjakan.
               </p>
-              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+              <button
+                onClick={() =>
+                  window.open("https://wa.me/6281234567890", "_blank")
+                }
+                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
+              >
                 Pesan Sekarang
               </button>
             </div>
@@ -256,7 +266,12 @@ function Section4() {
                 Isi cokelat yang meleleh saat digigit, bikin camilan ini cocok
                 untuk pecinta manis sejati.
               </p>
-              <button className="btn bg-rose-500 hover:bg-rose-400 border-rose-500 text-white w-full">
+              <button
+                onClick={() =>
+                  window.open("https://wa.me/6281234567890", "_blank")
+                }
+                className="btn bg-pink-500 hover:bg-pink-600 text-white w-full py-3 rounded-xl font-semibold tracking-wide transition-all duration-300 border-none"
+              >
                 Pesan Sekarang
               </button>
             </div>
