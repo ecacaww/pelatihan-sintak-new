@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom"; // Import useHistory
 import NavBar from "./NavBar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { RiEmotionHappyLine } from "react-icons/ri";
@@ -23,13 +22,6 @@ function HomePage() {
 export default HomePage;
 
 function HeroSection() {
-  const history = useHistory(); // Inisialisasi useHistory
-
-  // Fungsi untuk menangani klik tombol
-  const handleViewCatalog = () => {
-    history.push("/product#section2"); // Navigasi ke ProductPage dan Section2
-  };
-
   return (
     <div
       className="hero h-[90vh] relative"
@@ -50,11 +42,9 @@ function HeroSection() {
             <br />
             <span className="text-pink-400">The Mochi Experience</span>
           </h1>
-          <button
-            className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-"
-            onClick={handleViewCatalog} // Tambahkan onClick
-          >
+          <button className="btn bg-gradient-to-r from-[#FF85A2] to-[#FF6B8B] border-none text-white hover:shadow-lg transition-all hover:-translate-y-">
             View Mochi Catalog <IoIosArrowRoundForward className="text-xl" />
+            <link rel="stylesheet" href="/product" />
           </button>
         </div>
       </div>
