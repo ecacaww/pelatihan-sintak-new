@@ -25,19 +25,19 @@ export default ContactPage
 function ContactHero() {
   const stats = [
     {
-      icon: <FiPhone className="text-4xl" />,
+      icon: <FiPhone className="text-2xl sm:text-3xl md:text-4xl" />,
       title: "Respon Cepat",
       value: "24 Jam",
       desc: "Layanan pelanggan",
     },
     {
-      icon: <FiMessageSquare className="text-4xl" />,
+      icon: <FiMessageSquare className="text-2xl sm:text-3xl md:text-4xl" />,
       title: "Pesan Terkirim",
       value: "1000+",
       desc: "Dari pelanggan setia",
     },
     {
-      icon: <GiEarthAsiaOceania className="text-4xl" />,
+      icon: <GiEarthAsiaOceania className="text-2xl sm:text-3xl md:text-4xl" />,
       title: "Jangkauan",
       value: "Nasional",
       desc: "Pengiriman ke seluruh Indonesia",
@@ -45,22 +45,25 @@ function ContactHero() {
   ]
 
   return (
-    <div
-      className="hero h-[550px] relative"
+    <div className="relative w-full ">
+        <div 
+      className="absolute inset-0 z-0 bg-stone-900/50"
       style={{
         backgroundImage: "url(/bg-mochi.jpg)",
         backgroundPosition: "center",
         backgroundSize: "cover",
+        backgroundRepeat: "no-repeat"
       }}
     >
-      <div className="hero-overlay bg-stone-900/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/40 to-stone-900/20"></div>
+      </div>
 
-      <div className="hero-content text-center text-rose-100 relative z-10">
-        <div className="max-w-4xl">
-          <h1 className="mb-5 text-5xl font-bold tracking-tight text-pink-300 drop-shadow-md">
+      <div className="relative z-10 min-h-[350px] sm:min-h-[400px] md:min-h-[550px] flex items-center justify-center px-4 py-12">
+        <div className="w-full max-w-4xl text-center px-2 sm:px-4">
+          <h1 className="mb-3 sm:mb-5 text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-pink-300 drop-shadow-md">
             Hubungi <span className="text-pink-400">MoChewy</span>
           </h1>
-          <p className="mb-8 text-xl font-medium text-pink-200 drop-shadow-sm">
+          <p className="mb-4 sm:mb-8 text-sm sm:text-base md:text-xl font-medium text-pink-200 drop-shadow-sm">
             Kami siap mendengarkan pertanyaan, saran, atau pesanan Anda. Hubungi kami untuk pengalaman mochi yang tak
             terlupakan.
           </p>

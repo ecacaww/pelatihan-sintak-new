@@ -64,8 +64,8 @@ function Footer() {
 
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-6 group">
-                <div className="p-3 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                  <FiCoffee className="text-2xl text-white" />
+                <div className="p-3  rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                <img src="logo-moci.jpg" className="text-[#333333] text-2xl" />
                 </div>
                 <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-800 to-pink-600 bg-clip-text text-transparent">
                   MoChewy
